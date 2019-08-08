@@ -24,15 +24,16 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class MessageBeanConfiguration {
-	@Bean
-	@ConditionalOnExpression("${paascloud.aliyun.rocketMq.reliableMessageConsumer:true}")
-	public MqConsumerStoreAspect mqConsumerStoreAspect() {
-		return new MqConsumerStoreAspect();
-	}
 
-	@Bean
-	@ConditionalOnExpression("${paascloud.aliyun.rocketMq.reliableMessageProducer:true}")
-	public MqProducerStoreAspect mqProducerStoreAspect() {
-		return new MqProducerStoreAspect();
-	}
+    @Bean
+    @ConditionalOnExpression("${paascloud.aliyun.rocketMq.reliableMessageConsumer:true}")
+    public MqConsumerStoreAspect mqConsumerStoreAspect() {
+        return new MqConsumerStoreAspect();
+    }
+
+    @Bean
+    @ConditionalOnExpression("${paascloud.aliyun.rocketMq.reliableMessageProducer:true}")
+    public MqProducerStoreAspect mqProducerStoreAspect() {
+        return new MqProducerStoreAspect();
+    }
 }

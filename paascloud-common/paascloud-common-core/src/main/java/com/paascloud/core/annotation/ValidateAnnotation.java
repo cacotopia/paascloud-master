@@ -22,10 +22,10 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface ValidateAnnotation {
-	/**
-	 * Is validate boolean.
-	 *
-	 * @return the boolean
-	 */
-	boolean isValidate() default true;
+    /**
+     * Is validate boolean.
+     *
+     * @return the boolean
+     */
+    boolean isValidate() default true;
 }

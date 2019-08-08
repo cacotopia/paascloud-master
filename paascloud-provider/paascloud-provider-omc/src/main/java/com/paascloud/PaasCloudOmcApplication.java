@@ -36,23 +36,23 @@ import javax.sql.DataSource;
 @EnableTransactionManagement
 public class PaasCloudOmcApplication {
 
-	/**
-	 * The entry point of application.
-	 *
-	 * @param args the input arguments
-	 */
-	public static void main(String[] args) {
-		SpringApplication.run(PaasCloudOmcApplication.class, args);
-	}
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
+    public static void main(String[] args) {
+        SpringApplication.run(PaasCloudOmcApplication.class, args);
+    }
 
-	@Bean
-	public SpringLiquibase springLiquibase(DataSource dataSource) {
+    @Bean
+    public SpringLiquibase springLiquibase(DataSource dataSource) {
 
-		SpringLiquibase springLiquibase = new SpringLiquibase();
+        SpringLiquibase springLiquibase = new SpringLiquibase();
 
-		springLiquibase.setDataSource(dataSource);
-		springLiquibase.setChangeLog("classpath:/liquibase/index.xml");
+        springLiquibase.setDataSource(dataSource);
+        springLiquibase.setChangeLog("classpath:/liquibase/index.xml");
 
-		return springLiquibase;
-	}
+        return springLiquibase;
+    }
 }

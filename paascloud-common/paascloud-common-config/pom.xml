@@ -25,6 +25,4 @@
             <artifactId>paascloud-common-base</artifactId>
         </dependency>
     </dependencies>
-
-
 </project>

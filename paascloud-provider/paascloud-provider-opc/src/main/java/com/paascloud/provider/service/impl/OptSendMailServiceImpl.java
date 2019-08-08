@@ -44,96 +44,98 @@ import java.util.Set;
 @Slf4j
 @Service
 public class OptSendMailServiceImpl implements OptSendMailService {
-	@Resource
-	private TaskExecutor taskExecutor;
-	@Resource
-	private OptFreeMarkerService optVelocityService;
 
-	@Resource
-	private JavaMailSender mailSender;
+    @Resource
+    private TaskExecutor taskExecutor;
 
-	@Value("${spring.mail.username}")
-	private String from;
+    @Resource
+    private OptFreeMarkerService optVelocityService;
 
-	@Override
-	public int sendSimpleMail(String subject, String text, Set<String> to) {
-		log.info("sendSimpleMail - 发送简单邮件. subject={}, text={}, to={}", subject, text, to);
-		int result = 1;
-		try {
-			SimpleMailMessage message = MailEntity.createSimpleMailMessage(subject, text, to);
-			message.setFrom(from);
-			taskExecutor.execute(() -> mailSender.send(message));
-		} catch (Exception e) {
-			log.info("sendSimpleMail [FAIL] ex={}", e.getMessage(), e);
-			result = 0;
-		}
-		return result;
-	}
+    @Resource
+    private JavaMailSender mailSender;
 
-	@Override
-	public int sendTemplateMail(String subject, String text, Set<String> to) {
-		log.info("sendTemplateMail - 发送模板邮件. subject={}, text={}, to={}", subject, text, to);
-		int result = 1;
-		try {
-			MimeMessage mimeMessage = getMimeMessage(subject, text, to);
-			taskExecutor.execute(() -> mailSender.send(mimeMessage));
-		} catch (Exception e) {
-			log.info("sendTemplateMail [FAIL] ex={}", e.getMessage(), e);
-			result = 0;
-		}
-		return result;
-	}
+    @Value("${spring.mail.username}")
+    private String from;
 
-	private MimeMessage getMimeMessage(String subject, String text, Set<String> to) {
-		Preconditions.checkArgument(!PubUtils.isNull(subject, text, to), "参数异常, 邮件信息不完整");
+    @Override
+    public int sendSimpleMail(String subject, String text, Set<String> to) {
+        log.info("sendSimpleMail - 发送简单邮件. subject={}, text={}, to={}", subject, text, to);
+        int result = 1;
+        try {
+            SimpleMailMessage message = MailEntity.createSimpleMailMessage(subject, text, to);
+            message.setFrom(from);
+            taskExecutor.execute(() -> mailSender.send(message));
+        } catch (Exception e) {
+            log.info("sendSimpleMail [FAIL] ex={}", e.getMessage(), e);
+            result = 0;
+        }
+        return result;
+    }
 
-		String[] toArray = setToArray(to);
-		Preconditions.checkArgument(PublicUtil.isNotEmpty(toArray), "请输入收件人邮箱");
-		MimeMessage mimeMessage = mailSender.createMimeMessage();
-		MimeMessageHelper helper;
-		try {
-			helper = new MimeMessageHelper(mimeMessage, true);
-			helper.setFrom(from);
-			helper.setTo(toArray);
-			helper.setSubject(subject);
-			helper.setText(text, true);
-		} catch (MessagingException e) {
-			log.error("生成邮件消息体, 出现异常={}", e.getMessage(), e);
-			throw new OpcBizException(ErrorCodeEnum.OPC10040005);
-		}
-		return mimeMessage;
-	}
+    @Override
+    public int sendTemplateMail(String subject, String text, Set<String> to) {
+        log.info("sendTemplateMail - 发送模板邮件. subject={}, text={}, to={}", subject, text, to);
+        int result = 1;
+        try {
+            MimeMessage mimeMessage = getMimeMessage(subject, text, to);
+            taskExecutor.execute(() -> mailSender.send(mimeMessage));
+        } catch (Exception e) {
+            log.info("sendTemplateMail [FAIL] ex={}", e.getMessage(), e);
+            result = 0;
+        }
+        return result;
+    }
 
-	@Override
-	public int sendTemplateMail(Map<String, Object> model, String templateLocation, String subject, Set<String> to) {
-		log.info("sendTemplateMail - 发送模板邮件. subject={}, model={}, to={}, templateLocation={}", subject, model, to, templateLocation);
+    private MimeMessage getMimeMessage(String subject, String text, Set<String> to) {
+        Preconditions.checkArgument(!PubUtils.isNull(subject, text, to), "参数异常, 邮件信息不完整");
 
-		String text;
-		try {
-			text = optVelocityService.getTemplate(model, templateLocation);
-		} catch (IOException | TemplateException e) {
-			log.info("sendTemplateMail [FAIL] ex={}", e.getMessage(), e);
-			throw new OpcBizException(ErrorCodeEnum.OPC10040006, e);
-		}
-		return this.sendTemplateMail(subject, text, to);
-	}
+        String[] toArray = setToArray(to);
+        Preconditions.checkArgument(PublicUtil.isNotEmpty(toArray), "请输入收件人邮箱");
+        MimeMessage mimeMessage = mailSender.createMimeMessage();
+        MimeMessageHelper helper;
+        try {
+            helper = new MimeMessageHelper(mimeMessage, true);
+            helper.setFrom(from);
+            helper.setTo(toArray);
+            helper.setSubject(subject);
+            helper.setText(text, true);
+        } catch (MessagingException e) {
+            log.error("生成邮件消息体, 出现异常={}", e.getMessage(), e);
+            throw new OpcBizException(ErrorCodeEnum.OPC10040005);
+        }
+        return mimeMessage;
+    }
+
+    @Override
+    public int sendTemplateMail(Map<String, Object> model, String templateLocation, String subject, Set<String> to) {
+        log.info("sendTemplateMail - 发送模板邮件. subject={}, model={}, to={}, templateLocation={}", subject, model, to, templateLocation);
+
+        String text;
+        try {
+            text = optVelocityService.getTemplate(model, templateLocation);
+        } catch (IOException | TemplateException e) {
+            log.info("sendTemplateMail [FAIL] ex={}", e.getMessage(), e);
+            throw new OpcBizException(ErrorCodeEnum.OPC10040006, e);
+        }
+        return this.sendTemplateMail(subject, text, to);
+    }
 
 
-	private String[] setToArray(Set<String> to) {
-		Preconditions.checkArgument(PublicUtil.isNotEmpty(to), "请输入收件人邮箱");
+    private String[] setToArray(Set<String> to) {
+        Preconditions.checkArgument(PublicUtil.isNotEmpty(to), "请输入收件人邮箱");
 
-		Set<String> toSet = Sets.newHashSet();
-		for (String toStr : to) {
-			toStr = toStr.trim();
-			if (PubUtils.isEmail(toStr)) {
-				toSet.add(toStr);
-			}
-		}
-		if (PublicUtil.isEmpty(toSet)) {
-			return null;
-		}
-		return toSet.toArray(new String[toSet.size()]);
-	}
+        Set<String> toSet = Sets.newHashSet();
+        for (String toStr : to) {
+            toStr = toStr.trim();
+            if (PubUtils.isEmail(toStr)) {
+                toSet.add(toStr);
+            }
+        }
+        if (PublicUtil.isEmpty(toSet)) {
+            return null;
+        }
+        return toSet.toArray(new String[toSet.size()]);
+    }
 
 
 }

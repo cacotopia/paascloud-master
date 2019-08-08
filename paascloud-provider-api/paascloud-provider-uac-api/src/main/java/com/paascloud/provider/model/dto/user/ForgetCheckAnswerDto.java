@@ -25,11 +25,11 @@ import java.io.Serializable;
 @Data
 @ApiModel
 public class ForgetCheckAnswerDto implements Serializable {
-	private static final long serialVersionUID = -4611532562847293450L;
-	@ApiModelProperty(value = "登录名")
-	private String loginName;
-	@ApiModelProperty(value = "问题")
-	private String email;
-	@ApiModelProperty(value = "答案")
-	private String answer;
+    private static final long serialVersionUID = -4611532562847293450L;
+    @ApiModelProperty(value = "登录名")
+    private String loginName;
+    @ApiModelProperty(value = "问题")
+    private String email;
+    @ApiModelProperty(value = "答案")
+    private String answer;
 }

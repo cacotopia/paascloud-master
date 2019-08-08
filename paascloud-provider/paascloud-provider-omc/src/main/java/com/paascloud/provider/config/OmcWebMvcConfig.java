@@ -36,31 +36,31 @@ import java.util.List;
 @Import(SwaggerConfiguration.class)
 public class OmcWebMvcConfig extends WebMvcConfigurerAdapter {
 
-	@Resource
-	private TokenInterceptor vueViewInterceptor;
+    @Resource
+    private TokenInterceptor vueViewInterceptor;
 
-	@Override
-	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/**")
-				.addResourceLocations("classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/");
-	}
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/**")
+                .addResourceLocations("classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/");
+    }
 
-	/**
-	 * Add interceptors.
-	 *
-	 * @param registry the registry
-	 */
-	@Override
-	public void addInterceptors(InterceptorRegistry registry) {
-		super.addInterceptors(registry);
-		registry.addInterceptor(vueViewInterceptor)
-				.addPathPatterns("/**")
-				.excludePathPatterns("/pay/alipayCallback", "/swagger-resources/**", "*.js", "/**/*.js", "*.css", "/**/*.css", "*.html", "/**/*.html");
-	}
+    /**
+     * Add interceptors.
+     *
+     * @param registry the registry
+     */
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        super.addInterceptors(registry);
+        registry.addInterceptor(vueViewInterceptor)
+                .addPathPatterns("/**")
+                .excludePathPatterns("/pay/alipayCallback", "/swagger-resources/**", "*.js", "/**/*.js", "*.css", "/**/*.css", "*.html", "/**/*.html");
+    }
 
-	@Override
-	public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-		PcObjectMapper.buidMvcMessageConverter(converters);
-	}
+    @Override
+    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+        PcObjectMapper.buidMvcMessageConverter(converters);
+    }
 
 }
