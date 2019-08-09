@@ -37,26 +37,26 @@ import org.springframework.context.annotation.Bean;
 @EnableAdminServer
 public class PaasCloudMonitorApplication {
 
-	/**
-	 * Hazelcast config config.
-	 *
-	 * @return the config
-	 */
-	@Bean
-	public Config hazelcastConfig() {
-		return new Config().setProperty("hazelcast.jmx", "true")
-				.addMapConfig(new MapConfig("spring-boot-admin-application-store").setBackupCount(1)
-						.setEvictionPolicy(EvictionPolicy.NONE))
-				.addListConfig(new ListConfig("spring-boot-admin-event-store").setBackupCount(1)
-						.setMaxSize(1000));
-	}
+    /**
+     * Hazelcast config config.
+     *
+     * @return the config
+     */
+    @Bean
+    public Config hazelcastConfig() {
+        return new Config().setProperty("hazelcast.jmx", "true")
+                .addMapConfig(new MapConfig("spring-boot-admin-application-store").setBackupCount(1)
+                        .setEvictionPolicy(EvictionPolicy.NONE))
+                .addListConfig(new ListConfig("spring-boot-admin-event-store").setBackupCount(1)
+                        .setMaxSize(1000));
+    }
 
-	/**
-	 * The entry point of application.
-	 *
-	 * @param args the input arguments
-	 */
-	public static void main(String[] args) {
-		SpringApplication.run(PaasCloudMonitorApplication.class, args);
-	}
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
+    public static void main(String[] args) {
+        SpringApplication.run(PaasCloudMonitorApplication.class, args);
+    }
 }
