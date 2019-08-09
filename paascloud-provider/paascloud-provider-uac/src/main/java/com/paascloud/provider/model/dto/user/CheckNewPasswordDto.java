@@ -10,7 +10,7 @@ import java.io.Serializable;
 /**
  * 校验密码.
  *
- * @author paascloud.net@gmail.com
+ * @author walkman
  */
 @Data
 @ApiModel(value = "校验新密码是否与原始密码相同Dto ")

@@ -10,7 +10,7 @@ import java.util.Set;
 /**
  * The class Role bind user dto.
  *
- * @author paascloud.net@gmail.com
+ * @author walkman
  */
 @Data
 @ApiModel(value = "角色绑定用户")

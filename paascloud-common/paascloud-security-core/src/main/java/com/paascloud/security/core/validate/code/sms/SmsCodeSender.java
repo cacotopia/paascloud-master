@@ -3,7 +3,7 @@ package com.paascloud.security.core.validate.code.sms;
 /**
  * The interface Sms code sender.
  *
- * @author paascloud.net@gmail.com
+ * @author walkman
  */
 public interface SmsCodeSender {
 

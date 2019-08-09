@@ -3,7 +3,7 @@ package com.paascloud.provider.model.enums;
 /**
  * The enum Uac email template enum.
  *
- * @author paascloud.net@gmail.com
+ * @author walkman
  */
 public enum UacEmailTemplateEnum {
 

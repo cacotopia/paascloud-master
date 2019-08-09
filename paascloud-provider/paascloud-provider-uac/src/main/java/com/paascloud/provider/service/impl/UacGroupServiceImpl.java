@@ -38,7 +38,7 @@ import java.util.*;
 /**
  * The class Uac group service.
  *
- * @author paascloud.net@gmail.com
+ * @author walkman
  */
 @Service
 @Transactional(rollbackFor = Exception.class)

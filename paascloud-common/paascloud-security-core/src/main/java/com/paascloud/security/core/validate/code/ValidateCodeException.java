@@ -6,7 +6,7 @@ import org.springframework.security.core.AuthenticationException;
 /**
  * The class Validate code exception.
  *
- * @author paascloud.net@gmail.com
+ * @author walkman
  */
 public class ValidateCodeException extends AuthenticationException {
 

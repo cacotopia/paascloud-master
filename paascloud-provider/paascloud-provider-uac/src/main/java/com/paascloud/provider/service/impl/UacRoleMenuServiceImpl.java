@@ -16,7 +16,7 @@ import java.util.Set;
 /**
  * The class Uac role menu service.
  *
- * @author paascloud.net@gmail.com
+ * @author walkman
  */
 @Service
 @Transactional(rollbackFor = Exception.class)

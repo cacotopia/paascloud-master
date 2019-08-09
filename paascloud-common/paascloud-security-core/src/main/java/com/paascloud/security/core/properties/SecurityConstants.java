@@ -3,7 +3,7 @@ package com.paascloud.security.core.properties;
 /**
  * The interface Security constants.
  *
- * @author paascloud.net@gmail.com
+ * @author walkman
  */
 public interface SecurityConstants {
 

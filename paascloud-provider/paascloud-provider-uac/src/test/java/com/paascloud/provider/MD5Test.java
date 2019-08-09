@@ -9,7 +9,7 @@ import org.springframework.security.crypto.keygen.KeyGenerators;
 
 /**
  * The class Md 5 test.
- * @author paascloud.net@gmail.com
+ * @author walkman
  */
 @Slf4j
 public class MD5Test {

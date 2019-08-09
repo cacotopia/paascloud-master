@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * The class Uac log main dto.
  *
- * @author paascloud.net@gmail.com
+ * @author walkman
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

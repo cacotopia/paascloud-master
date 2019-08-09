@@ -6,25 +6,14 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.0.3.RELEASE</version>
-        <relativePath/>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>com.liuzm.paascloud</groupId>
     <artifactId>paascloud-master</artifactId>
-    <version>1.0</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>paascloud-eureka</module>
-        <module>paascloud-discovery</module>
-        <module>paascloud-monitor</module>
-        <module>paascloud-zipkin</module>
-        <module>paascloud-gateway</module>
-        <module>paascloud-provider-api</module>
-        <module>paascloud-common</module>
-        <module>paascloud-provider</module>
-        <module>paascloud-generator</module>
-    </modules>
     <developers>
         <developer>
             <name>刘兆明</name>
@@ -56,11 +45,10 @@
         <druid-spring-boot-starter.version>1.1.18</druid-spring-boot-starter.version>
         <mapper.version>3.4.0</mapper.version>
         <mapper-spring-boot-starter.version>2.1.5</mapper-spring-boot-starter.version>
-        <springframework.version>4.3.8.RELEASE</springframework.version>
-        <spring.version>4.3.11.RELEASE</spring.version>
-        <spring-boot.version>4.3.11.RELEASE</spring-boot.version>
-        <spring-cloud.version>Finchley.SR4</spring-cloud.version>
-        <spring-security.version>4.3.11.RELEASE</spring-security.version>
+        <springframework.version>4.0.7.RELEASE</springframework.version>
+        <!--        <spring-boot.version>4.3.11.RELEASE</spring-boot.version>-->
+        <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+        <!--        <spring-security.version>4.3.11.RELEASE</spring-security.version>-->
         <springfox.version>2.9.2</springfox.version>
         <spring-boot-starter-swagger.version>1.4.1.RELEASE</spring-boot-starter-swagger.version>
         <swagger-butler-core.version>2.0.0</swagger-butler-core.version>
@@ -79,7 +67,7 @@
         <codehaus-jackson.version>1.9.13</codehaus-jackson.version>
         <gson.version>2.8.5</gson.version>
         <zxing.version>2.8.5</zxing.version>
-        <hibernate-validator.version>5.4.3.Final</hibernate-validator.version>
+        <hibernate-validator.version>5.2.5.Final</hibernate-validator.version>
         <fluent-validator.version>1.0.9</fluent-validator.version>
         <modelmapper.version>1.1.2</modelmapper.version>
         <rocketmq.version>4.4.0</rocketmq.version>
@@ -108,24 +96,6 @@
         <maven-jar-plugin.version>3.1.2</maven-jar-plugin.version>
         <dockerfile-maven-plugin.version>1.4.12</dockerfile-maven-plugin.version>
     </properties>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-    </dependencies>
-    <!--    <distributionManagement>-->
-    <!--        <repository>-->
-    <!--            <id>paascloud-lib-rep</id>-->
-    <!--            <url>http://139.199.125.217:8081/content/repositories/paascloud-lib-rep/</url>-->
-    <!--        </repository>-->
-    <!--        <snapshotRepository>-->
-    <!--            <id>nexus-snapshots</id>-->
-    <!--            <name>User Project Snapshot</name>-->
-    <!--            <url>http://139.199.125.217:8081/content/repositories/snapshots/</url>-->
-    <!--            <uniqueVersion>true</uniqueVersion>-->
-    <!--        </snapshotRepository>-->
-    <!--    </distributionManagement>-->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -134,6 +104,10 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
             </dependency>
             <!-- google java lib -->
             <dependency>
@@ -454,7 +428,7 @@
             <dependency>
                 <groupId>com.liuzm.paascloud</groupId>
                 <artifactId>elastic-job-lite-starter</artifactId>
-                <version>1.0</version>
+                <version>1.0.0</version>
             </dependency>
             <!-- aliyun -->
             <dependency>
@@ -476,7 +450,7 @@
             <dependency>
                 <groupId>com.aliyun.mns</groupId>
                 <artifactId>alicom-mns-receive-sdk</artifactId>
-                <version>1.0</version>
+                <version>1.0.0</version>
             </dependency>
             <!-- alipay start-->
             <!--      <dependency>-->
@@ -754,4 +728,15 @@
             </properties>
         </profile>
     </profiles>
+    <modules>
+                <module>paascloud-eureka</module>
+        <!--        <module>paascloud-discovery</module>-->
+        <!--        <module>paascloud-monitor</module>-->
+        <!--        <module>paascloud-zipkin</module>-->
+        <!--        <module>paascloud-gateway</module>-->
+        <!--        <module>paascloud-provider-api</module>-->
+        <!--        <module>paascloud-common</module>-->
+        <!--        <module>paascloud-provider</module>-->
+        <!--        <module>paascloud-generator</module>-->
+    </modules>
 </project>

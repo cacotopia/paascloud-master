@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * The class Redis service.
  *
- * @author paascloud.net@gmail.com
+ * @author walkman
  */
 @Slf4j
 @Service

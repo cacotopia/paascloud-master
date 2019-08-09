@@ -11,7 +11,7 @@ import java.io.Serializable;
 /**
  * The class Uac menu check code dto.
  *
- * @author paascloud.net@gmail.com
+ * @author walkman
  */
 @Data
 @ApiModel(value = "UacMenuCheckCodeDto")

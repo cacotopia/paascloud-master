@@ -12,7 +12,7 @@
     <parent>
         <groupId>com.liuzm.paascloud.provider</groupId>
         <artifactId>paascloud-provider</artifactId>
-        <version>1.0</version>
+        <version>1.0.0</version>
     </parent>
 
     <properties>
@@ -70,7 +70,7 @@
         <dependency>
             <groupId>com.liuzm.paascloud.provider.api</groupId>
             <artifactId>paascloud-provider-opc-api</artifactId>
-            <version>1.0</version>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>com.liuzm.paascloud.provider.api</groupId>

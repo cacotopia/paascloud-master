@@ -4,7 +4,7 @@ package com.paascloud.provider.model.enums;
 /**
  * The enum Uac menu status enum.
  *
- * @author paascloud.net@gmail.com
+ * @author walkman
  */
 public enum UacMenuStatusEnum {
 	/**

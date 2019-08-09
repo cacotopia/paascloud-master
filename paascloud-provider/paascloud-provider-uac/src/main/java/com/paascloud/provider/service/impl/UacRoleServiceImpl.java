@@ -32,7 +32,7 @@ import java.util.*;
 /**
  * The class Uac role service.
  *
- * @author paascloud.net@gmail.com
+ * @author walkman
  */
 @Service
 @Transactional(rollbackFor = Exception.class)

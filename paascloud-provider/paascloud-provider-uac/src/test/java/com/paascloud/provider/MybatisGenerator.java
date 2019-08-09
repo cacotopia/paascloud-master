@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * The class Mybatis generator.
- * @author paascloud.net@gmail.com
+ * @author walkman
  */
 public class MybatisGenerator {
 
