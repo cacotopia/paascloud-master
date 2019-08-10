@@ -152,6 +152,8 @@ Spring Cloud 爱好者,现就任于鲜易供应链平台研发部.
 
 ![项目架构图](http://img.paascloud.net/paascloud/doc/paascloud-project.png)
 
+docker run -d --name=paascloud-eureka -p 8761:8761 registry.cn-hangzhou.aliyuncs.com/sinotopia/paascloud-eureka:latest
+
 
 
 

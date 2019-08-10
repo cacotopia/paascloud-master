@@ -6,10 +6,28 @@ spring:
     active: dev
   application:
     name: @pom.artifactId@
+  security:
+    basic:
+      enabled: true
+    user:
+      name: admin
+      password: admin
+  cloud:
+    inetutils:
+      ignoredInterfaces:
+        - docker0
+        - veth.*
+        - VM.*
+      preferredNetworks:
+        - 192.168
 
-security:
-  basic:
-    enabled: true
-  user:
-    name: root
-    password: root
+eureka:
+  instance:
+    hostname: localhost
+  server:
+    enable-self-preservation: false
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka

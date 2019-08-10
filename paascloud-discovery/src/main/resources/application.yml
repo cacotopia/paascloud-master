@@ -15,11 +15,10 @@ spring:
     admin:
       username: admin
       password: admin
-
-security:
-  user:
-    name: admin
-    password: admin
+  security:
+    user:
+      name: admin
+      password: admin
 
 info:
   软件著作权: paascloud快速搭建企业级分布式微服务平台

@@ -16,9 +16,9 @@
 
     <developers>
         <developer>
-            <name>刘兆明</name>
-            <url>https://paascloud.net</url>
-            <email>paascloud.net@gmail.com</email>
+            <name>walkman</name>
+            <url>https://sinotopia.net</url>
+            <email>cacotopia@126.com</email>
         </developer>
     </developers>
     <properties>
@@ -45,7 +45,7 @@
         <druid-spring-boot-starter.version>1.1.18</druid-spring-boot-starter.version>
         <mapper.version>3.4.0</mapper.version>
         <mapper-spring-boot-starter.version>2.1.5</mapper-spring-boot-starter.version>
-        <springframework.version>4.0.7.RELEASE</springframework.version>
+        <springframework.version>5.0.7.RELEASE</springframework.version>
         <!--        <spring-boot.version>4.3.11.RELEASE</spring-boot.version>-->
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
         <!--        <spring-security.version>4.3.11.RELEASE</spring-security.version>-->
@@ -63,11 +63,11 @@
         <httpclientutil.version>1.0</httpclientutil.version>
         <feign.form.spring.version>3.0.3</feign.form.spring.version>
         <fastjson.version>1.2.29</fastjson.version>
-        <fasterxml-jackson.version>2.8.4</fasterxml-jackson.version>
+        <fasterxml-jackson.version>2.9.6</fasterxml-jackson.version>
         <codehaus-jackson.version>1.9.13</codehaus-jackson.version>
         <gson.version>2.8.5</gson.version>
         <zxing.version>2.8.5</zxing.version>
-        <hibernate-validator.version>5.2.5.Final</hibernate-validator.version>
+        <!--        <hibernate-validator.version>6.0.10.Final</hibernate-validator.version>-->
         <fluent-validator.version>1.0.9</fluent-validator.version>
         <modelmapper.version>1.1.2</modelmapper.version>
         <rocketmq.version>4.4.0</rocketmq.version>
@@ -95,6 +95,12 @@
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
         <maven-jar-plugin.version>3.1.2</maven-jar-plugin.version>
         <dockerfile-maven-plugin.version>1.4.12</dockerfile-maven-plugin.version>
+        <dockerfile-maven-plugin.version>1.0.0</dockerfile-maven-plugin.version>
+        <dockerFileDir>src/main/java/docker</dockerFileDir>
+        <docker.image.prefix>cacotopia</docker.image.prefix>
+        <!-- aliyun  -->
+        <docker.repository>registry.cn-hangzhou.aliyuncs.com</docker.repository>
+        <docker.registry.name>sinotopia</docker.registry.name>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -110,11 +116,11 @@
                 <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
             </dependency>
             <!-- google java lib -->
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>${guava.version}</version>
-            </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>com.google.guava</groupId>-->
+            <!--                <artifactId>guava</artifactId>-->
+            <!--                <version>${guava.version}</version>-->
+            <!--            </dependency>-->
             <!--lombok-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -310,16 +316,16 @@
                 <version>${HikariCP.version}</version>
             </dependency>
             <!-- validator -->
-            <dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-validator</artifactId>
-                <version>${hibernate-validator.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.baidu.unbiz</groupId>
-                <artifactId>fluent-validator</artifactId>
-                <version>${fluent-validator.version}</version>
-            </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>org.hibernate</groupId>-->
+            <!--                <artifactId>hibernate-validator</artifactId>-->
+            <!--                <version>${hibernate-validator.version}</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.baidu.unbiz</groupId>-->
+            <!--                <artifactId>fluent-validator</artifactId>-->
+            <!--                <version>${fluent-validator.version}</version>-->
+            <!--            </dependency>-->
             <!-- spring framework -->
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -729,9 +735,9 @@
         </profile>
     </profiles>
     <modules>
-                <module>paascloud-eureka</module>
-        <!--        <module>paascloud-discovery</module>-->
-        <!--        <module>paascloud-monitor</module>-->
+        <module>paascloud-eureka</module>
+        <module>paascloud-discovery</module>
+        <module>paascloud-monitor</module>
         <!--        <module>paascloud-zipkin</module>-->
         <!--        <module>paascloud-gateway</module>-->
         <!--        <module>paascloud-provider-api</module>-->
