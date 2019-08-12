@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * 更新福建表.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 @AllArgsConstructor

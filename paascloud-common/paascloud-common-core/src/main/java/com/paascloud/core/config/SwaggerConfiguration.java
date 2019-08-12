@@ -29,6 +29,7 @@ import java.util.List;
  */
 @EnableSwagger2
 public class SwaggerConfiguration {
+
 	@Resource
 	private PaascloudProperties paascloudProperties;
 

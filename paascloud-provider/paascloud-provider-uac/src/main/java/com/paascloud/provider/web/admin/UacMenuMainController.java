@@ -25,7 +25,7 @@ import java.util.List;
 /**
  * 菜单主页面.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @RestController
 @RequestMapping(value = "/menu", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

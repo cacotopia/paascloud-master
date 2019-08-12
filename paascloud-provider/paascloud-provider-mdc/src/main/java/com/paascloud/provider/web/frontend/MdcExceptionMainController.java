@@ -20,7 +20,7 @@ import javax.annotation.Resource;
 /**
  * 异常管理.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @RestController
 @RequestMapping(value = "/exception", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

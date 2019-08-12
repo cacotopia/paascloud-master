@@ -7,7 +7,7 @@ import java.io.UnsupportedEncodingException;
 /**
  * url转码、解码
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Slf4j
 public class UrlUtil {

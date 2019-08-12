@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 /**
  * The class User manager.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Slf4j
 @Component

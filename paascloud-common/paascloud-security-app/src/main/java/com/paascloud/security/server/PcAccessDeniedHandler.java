@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  * The class Pc access denied handler.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Slf4j
 @Configuration

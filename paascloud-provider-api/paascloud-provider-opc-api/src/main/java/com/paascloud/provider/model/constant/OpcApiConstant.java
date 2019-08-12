@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 /**
  * The class Opc api constant.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class OpcApiConstant {

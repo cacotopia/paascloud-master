@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * The class Auth header filter.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Slf4j
 @Component

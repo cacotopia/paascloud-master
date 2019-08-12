@@ -3,7 +3,7 @@ package com.paascloud.security.core.social.weixin.api;
 /**
  * 微信API调用接口
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public interface Weixin {
 

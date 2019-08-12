@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * session管理相关配置项
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 public class SessionProperties {

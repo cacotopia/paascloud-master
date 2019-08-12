@@ -8,7 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * The class Opc biz exception.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Slf4j
 public class OpcBizException extends BusinessException {

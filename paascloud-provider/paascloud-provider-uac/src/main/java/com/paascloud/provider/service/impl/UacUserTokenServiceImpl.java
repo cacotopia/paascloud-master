@@ -47,7 +47,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * The class Uac user token service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Service
 @Transactional(rollbackFor = Exception.class)

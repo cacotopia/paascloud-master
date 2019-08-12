@@ -21,47 +21,48 @@ import java.util.List;
 @Slf4j
 public class CoreHeaderInterceptor extends HandlerInterceptorAdapter {
 
-	/**
-	 * The constant HEADER_LABEL.
-	 */
-	public static final String HEADER_LABEL = "x-label";
-	/**
-	 * The constant HEADER_LABEL_SPLIT.
-	 */
-	public static final String HEADER_LABEL_SPLIT = ",";
+    /**
+     * The constant HEADER_LABEL.
+     */
+    public static final String HEADER_LABEL = "x-label";
 
-	/**
-	 * The constant LABEL.
-	 */
-	public static final HystrixRequestVariableDefault<List<String>> LABEL = new HystrixRequestVariableDefault<>();
+    /**
+     * The constant HEADER_LABEL_SPLIT.
+     */
+    public static final String HEADER_LABEL_SPLIT = ",";
 
-	private static void initHystrixRequestContext(String labels) {
-		log.info("LABEL={}", labels);
-		if (!HystrixRequestContext.isCurrentThreadInitialized()) {
-			HystrixRequestContext.initializeContext();
-		}
+    /**
+     * The constant LABEL.
+     */
+    public static final HystrixRequestVariableDefault<List<String>> LABEL = new HystrixRequestVariableDefault<>();
 
-		if (!StringUtils.isEmpty(labels)) {
-			CoreHeaderInterceptor.LABEL.set(Arrays.asList(labels.split(CoreHeaderInterceptor.HEADER_LABEL_SPLIT)));
-		} else {
-			CoreHeaderInterceptor.LABEL.set(Collections.emptyList());
-		}
-	}
+    private static void initHystrixRequestContext(String labels) {
+        log.info("LABEL={}", labels);
+        if (!HystrixRequestContext.isCurrentThreadInitialized()) {
+            HystrixRequestContext.initializeContext();
+        }
 
-	private static void shutdownHystrixRequestContext() {
-		if (HystrixRequestContext.isCurrentThreadInitialized()) {
-			HystrixRequestContext.getContextForCurrentThread().shutdown();
-		}
-	}
+        if (!StringUtils.isEmpty(labels)) {
+            CoreHeaderInterceptor.LABEL.set(Arrays.asList(labels.split(CoreHeaderInterceptor.HEADER_LABEL_SPLIT)));
+        } else {
+            CoreHeaderInterceptor.LABEL.set(Collections.emptyList());
+        }
+    }
 
-	@Override
-	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
-		CoreHeaderInterceptor.initHystrixRequestContext(request.getHeader(CoreHeaderInterceptor.HEADER_LABEL));
-		return true;
-	}
+    private static void shutdownHystrixRequestContext() {
+        if (HystrixRequestContext.isCurrentThreadInitialized()) {
+            HystrixRequestContext.getContextForCurrentThread().shutdown();
+        }
+    }
 
-	@Override
-	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) {
-		CoreHeaderInterceptor.shutdownHystrixRequestContext();
-	}
+    @Override
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
+        CoreHeaderInterceptor.initHystrixRequestContext(request.getHeader(CoreHeaderInterceptor.HEADER_LABEL));
+        return true;
+    }
+
+    @Override
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) {
+        CoreHeaderInterceptor.shutdownHystrixRequestContext();
+    }
 }

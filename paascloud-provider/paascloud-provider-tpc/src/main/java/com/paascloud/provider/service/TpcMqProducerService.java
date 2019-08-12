@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * The interface Tpc mq producer service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public interface TpcMqProducerService extends IService<TpcMqProducer> {
 	/**

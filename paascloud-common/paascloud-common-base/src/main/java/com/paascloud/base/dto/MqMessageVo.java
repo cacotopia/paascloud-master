@@ -7,7 +7,7 @@ import lombok.EqualsAndHashCode;
 /**
  * The class Mq message vo.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

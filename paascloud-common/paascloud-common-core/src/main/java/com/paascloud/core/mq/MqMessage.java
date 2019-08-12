@@ -25,13 +25,18 @@ import java.io.UnsupportedEncodingException;
 @Data
 @ApiModel("消息队列")
 public class MqMessage implements Serializable {
+
 	private static final long serialVersionUID = 9215900048842983997L;
+
 	@ApiModelProperty("主题")
 	private String topic;
+
 	@ApiModelProperty("标签")
 	private String tag;
+
 	@ApiModelProperty("唯一键")
 	private String key;
+
 	@ApiModelProperty("消息体")
 	private String body;
 
@@ -51,7 +56,6 @@ public class MqMessage implements Serializable {
 		printCheckMessageLog(topic, key, body, tag);
 		checkMessage(topic, key, body);
 		return buildMessage(body, topic, tag, key);
-
 	}
 
 	private static void printCheckMessageLog(final String topic, final String key, final String body, final String tag) {
@@ -72,7 +76,6 @@ public class MqMessage implements Serializable {
 		printCheckMessageLog(topic, key, body, tag);
 		checkMessage(topic, key, body);
 		return buildMessage(body, topic, tag, key);
-
 	}
 
 	/**
@@ -91,7 +94,6 @@ public class MqMessage implements Serializable {
 		printCheckMessageLog(topic, key, body, tag);
 		checkMessage(topic, key, body);
 		return buildMessage(body, topic, tag, key);
-
 	}
 
 	/**
@@ -104,7 +106,6 @@ public class MqMessage implements Serializable {
 		this.topic = message.getTopic();
 		this.key = message.getKeys();
 		this.tag = message.getTags();
-
 	}
 
 	private static Message buildMessage(String body, String topic, String tag, String key) {

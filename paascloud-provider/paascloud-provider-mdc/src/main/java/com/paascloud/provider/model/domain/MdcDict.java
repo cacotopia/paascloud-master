@@ -11,7 +11,7 @@ import javax.persistence.Table;
 /**
  * 数据字典.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

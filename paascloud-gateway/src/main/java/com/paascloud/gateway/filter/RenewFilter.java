@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * The class Renew filter.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Component
 @Slf4j

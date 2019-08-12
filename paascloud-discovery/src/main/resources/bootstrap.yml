@@ -24,8 +24,8 @@ encrypt:
     secret: paascloud-keypass
 
 eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
   client:
     serviceUrl:
       defaultZone: http://admin:admin@localhost:8761/eureka/
-  instance:
-    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}

@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 /**
  * The class Mdc rpc service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Slf4j
 @Service

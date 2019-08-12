@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * The class Mdc mq subscribe vo.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

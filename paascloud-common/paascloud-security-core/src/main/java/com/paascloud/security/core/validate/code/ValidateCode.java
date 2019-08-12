@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 /**
  * 验证码信息封装类
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public class ValidateCode implements Serializable {
 

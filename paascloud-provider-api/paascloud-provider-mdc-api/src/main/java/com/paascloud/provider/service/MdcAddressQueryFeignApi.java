@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 /**
  * The interface Mdc product query feign api.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @FeignClient(value = "paascloud-provider-mdc", configuration = OAuth2FeignAutoConfiguration.class, fallback = MdcAddressQueryFeignHystrix.class)
 public interface MdcAddressQueryFeignApi {

@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Weixin API调用模板， scope为Request的Spring bean, 根据当前用户的accessToken创建。
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Slf4j
 public class WeixinImpl extends AbstractOAuth2ApiBinding implements Weixin {

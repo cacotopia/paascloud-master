@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * The class Sms code properties.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 public class SmsCodeProperties {

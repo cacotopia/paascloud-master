@@ -21,7 +21,6 @@ import java.io.InputStream;
 @Slf4j
 public class UacFallbackProvider implements FallbackProvider {
 
-
     @Override
     public String getRoute() {
         return "*";

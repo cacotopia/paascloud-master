@@ -12,7 +12,7 @@ import com.paascloud.provider.model.vo.OrderVo;
 /**
  * The interface Omc order service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public interface OmcOrderService extends IService<OmcOrder> {
 

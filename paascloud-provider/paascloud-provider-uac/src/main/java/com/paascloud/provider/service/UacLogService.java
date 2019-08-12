@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * The interface Uac log service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public interface UacLogService extends IService<UacLog> {
 

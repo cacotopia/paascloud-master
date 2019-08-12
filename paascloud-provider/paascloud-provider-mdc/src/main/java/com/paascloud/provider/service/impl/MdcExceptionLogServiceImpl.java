@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * The class Mdc exception log service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Service
 public class MdcExceptionLogServiceImpl extends BaseService<MdcExceptionLog> implements MdcExceptionLogService {

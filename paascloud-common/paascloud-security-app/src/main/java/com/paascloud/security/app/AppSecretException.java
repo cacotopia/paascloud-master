@@ -3,7 +3,7 @@ package com.paascloud.security.app;
 /**
  * The class App secret exception.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public class AppSecretException extends RuntimeException {
 

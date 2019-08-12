@@ -20,7 +20,7 @@ import javax.annotation.Resource;
 /**
  * The class Mq consumer change listener.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Slf4j
 @Component

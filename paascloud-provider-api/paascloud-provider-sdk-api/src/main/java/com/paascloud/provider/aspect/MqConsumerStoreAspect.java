@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * The class Mq consumer store aspect.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Slf4j
 @Aspect

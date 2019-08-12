@@ -6,7 +6,7 @@ import lombok.Data;
 /**
  * The class Job zookeeper properties.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 public class ZookeeperProperties {

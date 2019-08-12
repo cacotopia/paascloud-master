@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * 绑定结果视图
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public class PcConnectView extends AbstractView {
 

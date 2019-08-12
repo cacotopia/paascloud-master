@@ -9,7 +9,7 @@ import javax.persistence.*;
 /**
  * The class Mdc address.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

@@ -16,25 +16,26 @@ import java.util.List;
 /**
  * The class Pc object mapper.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public class PcObjectMapper {
-	private PcObjectMapper() {
-	}
 
-	public static void buidMvcMessageConverter(List<HttpMessageConverter<?>> converters) {
-		MappingJackson2HttpMessageConverter jackson2HttpMessageConverter = new MappingJackson2HttpMessageConverter();
-		SimpleModule simpleModule = new SimpleModule();
-		simpleModule.addSerializer(Long.class, ToStringSerializer.instance);
-		simpleModule.addSerializer(Long.TYPE, ToStringSerializer.instance);
-		ObjectMapper objectMapper = new ObjectMapper()
-				.registerModule(new ParameterNamesModule())
-				.registerModule(new Jdk8Module())
-				.registerModule(new JavaTimeModule())
-				.registerModule(simpleModule);
-		objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-		jackson2HttpMessageConverter.setObjectMapper(objectMapper);
-		converters.add(jackson2HttpMessageConverter);
-	}
+    private PcObjectMapper() {
+    }
+
+    public static void buidMvcMessageConverter(List<HttpMessageConverter<?>> converters) {
+        MappingJackson2HttpMessageConverter jackson2HttpMessageConverter = new MappingJackson2HttpMessageConverter();
+        SimpleModule simpleModule = new SimpleModule();
+        simpleModule.addSerializer(Long.class, ToStringSerializer.instance);
+        simpleModule.addSerializer(Long.TYPE, ToStringSerializer.instance);
+        ObjectMapper objectMapper = new ObjectMapper()
+                .registerModule(new ParameterNamesModule())
+                .registerModule(new Jdk8Module())
+                .registerModule(new JavaTimeModule())
+                .registerModule(simpleModule);
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        jackson2HttpMessageConverter.setObjectMapper(objectMapper);
+        converters.add(jackson2HttpMessageConverter);
+    }
 
 }

@@ -11,7 +11,7 @@ import java.io.Serializable;
 /**
  * The class Mdc category check name dto.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 @ApiModel

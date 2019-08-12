@@ -25,7 +25,7 @@ import java.util.Map;
 /**
  * The class Ptc pay controller.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @RestController
 @RequestMapping(value = "/pay")

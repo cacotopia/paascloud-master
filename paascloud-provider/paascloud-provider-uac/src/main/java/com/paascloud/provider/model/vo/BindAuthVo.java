@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * The class Bind auth vo.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 @ApiModel

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 /**
  * The interface Tpc job task mapper.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Mapper
 @Component

@@ -7,7 +7,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 /**
  * The class Security config.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {

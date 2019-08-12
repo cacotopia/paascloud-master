@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * 验证码配置
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 public class ValidateCodeProperties {

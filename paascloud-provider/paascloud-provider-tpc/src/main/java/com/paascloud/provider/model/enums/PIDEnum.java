@@ -4,7 +4,7 @@ package com.paascloud.provider.model.enums;
 /**
  * The enum Pid enum.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public enum PIDEnum {
 	/**

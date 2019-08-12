@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * 校验码处理器管理器
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Component
 public class ValidateCodeProcessorHolder {

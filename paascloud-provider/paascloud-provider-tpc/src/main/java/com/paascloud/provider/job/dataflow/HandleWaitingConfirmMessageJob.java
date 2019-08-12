@@ -21,7 +21,7 @@
 ///**
 // * 处理待确认的消息数据.
 // *
-// * @author paascloud.net @gmail.com
+// * @author walkman
 // */
 //@Slf4j
 //@Component

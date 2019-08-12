@@ -6,7 +6,7 @@ import lombok.Data;
 /**
  * The class Kaptcha vo.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 @Api

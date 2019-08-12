@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * The class Pc job task.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 public class PcJobTask implements Serializable {

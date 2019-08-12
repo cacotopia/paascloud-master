@@ -24,7 +24,7 @@ import java.util.Map;
 /**
  * 组织相关公用接口
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @RestController
 @RequestMapping(value = "/group", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

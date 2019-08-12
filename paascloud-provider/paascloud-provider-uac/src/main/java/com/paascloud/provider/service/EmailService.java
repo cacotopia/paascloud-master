@@ -5,7 +5,7 @@ import com.paascloud.provider.model.dto.email.SendEmailMessage;
 /**
  * The interface Email service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public interface EmailService {
 	/**

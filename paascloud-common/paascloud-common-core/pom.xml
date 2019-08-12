@@ -76,10 +76,6 @@
         </dependency>
         <dependency>
             <groupId>com.liuzm.paascloud.common</groupId>
-            <artifactId>paascloud-common-zk</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.liuzm.paascloud.common</groupId>
             <artifactId>paascloud-common-base</artifactId>
         </dependency>
         <dependency>
@@ -89,6 +85,10 @@
         <dependency>
             <groupId>com.liuzm.paascloud.common</groupId>
             <artifactId>paascloud-common-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.liuzm.paascloud.common</groupId>
+            <artifactId>paascloud-common-zk</artifactId>
         </dependency>
     </dependencies>
 </project>

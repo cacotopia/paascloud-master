@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 /**
  * The class Sharding context dto.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 @NoArgsConstructor

@@ -26,7 +26,7 @@ import javax.sql.DataSource;
 /**
  * 资源服务器配置
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Configuration
 @EnableResourceServer

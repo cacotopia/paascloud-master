@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 /**
  * The interface No need access authentication.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

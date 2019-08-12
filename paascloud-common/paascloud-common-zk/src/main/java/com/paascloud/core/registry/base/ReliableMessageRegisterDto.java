@@ -7,7 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * The class Reliable message register dto.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 public class ReliableMessageRegisterDto {

@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 /**
  * The class Validate util.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ValidateUtil {

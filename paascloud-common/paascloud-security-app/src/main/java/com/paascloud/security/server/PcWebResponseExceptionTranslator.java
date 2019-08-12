@@ -7,7 +7,7 @@ import org.springframework.security.oauth2.provider.error.WebResponseExceptionTr
 /**
  * The class Pc web response exception translator.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public class PcWebResponseExceptionTranslator implements WebResponseExceptionTranslator {
 	/**

@@ -5,7 +5,7 @@ import com.paascloud.security.core.properties.SecurityConstants;
 /**
  * 校验码类型
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public enum ValidateCodeType {
 

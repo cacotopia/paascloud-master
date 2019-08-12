@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * The interface Tpc mq topic mapper.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Mapper
 @Component

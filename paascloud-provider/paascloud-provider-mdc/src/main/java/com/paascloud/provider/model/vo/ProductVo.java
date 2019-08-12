@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * The class Product vo.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

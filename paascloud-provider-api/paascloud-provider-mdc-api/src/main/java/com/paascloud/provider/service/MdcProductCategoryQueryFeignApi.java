@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * The interface Mdc product category query feign api.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @FeignClient(value = "paascloud-provider-mdc", configuration = OAuth2FeignAutoConfiguration.class, fallback = MdcProductCategoryQueryFeignHystrix.class)
 public interface MdcProductCategoryQueryFeignApi {

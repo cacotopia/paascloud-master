@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * The class Tpc mq tag controller.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @RestController
 @RequestMapping(value = "/tag", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * The interface Mdc product category service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public interface MdcProductCategoryService extends IService<MdcProductCategory> {
 

@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * The enum Job task status enum.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public enum JobTaskStatusEnum {
 

@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class Uac rpc service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Service
 @Slf4j

@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * The class Mdc dict service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Service
 @Transactional(rollbackFor = Exception.class)

@@ -21,6 +21,7 @@
             <email>cacotopia@126.com</email>
         </developer>
     </developers>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -49,11 +50,12 @@
         <!--        <spring-boot.version>4.3.11.RELEASE</spring-boot.version>-->
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
         <!--        <spring-security.version>4.3.11.RELEASE</spring-security.version>-->
+        <spring-security-jwt.version>1.0.10.RELEASE</spring-security-jwt.version>
         <springfox.version>2.9.2</springfox.version>
         <spring-boot-starter-swagger.version>1.4.1.RELEASE</spring-boot-starter-swagger.version>
         <swagger-butler-core.version>2.0.0</swagger-butler-core.version>
-        <paascloud.security.version>1.0</paascloud.security.version>
-        <paascloud.version>1.0</paascloud.version>
+        <paascloud.version>1.0.0</paascloud.version>
+        <paascloud.security.version>1.0.0</paascloud.security.version>
         <elastic-job.version>2.1.5</elastic-job.version>
         <curator.version>2.10.0</curator.version>
         <mysql.version>5.1.39</mysql.version>
@@ -116,11 +118,11 @@
                 <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
             </dependency>
             <!-- google java lib -->
-            <!--            <dependency>-->
-            <!--                <groupId>com.google.guava</groupId>-->
-            <!--                <artifactId>guava</artifactId>-->
-            <!--                <version>${guava.version}</version>-->
-            <!--            </dependency>-->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
             <!--lombok-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -341,6 +343,12 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-web</artifactId>
                 <version>${springframework.version}</version>
+            </dependency>
+            <!-- spring-security  -->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-jwt</artifactId>
+                <version>${spring-security-jwt.version}</version>
             </dependency>
             <!-- apollo -->
             <dependency>
@@ -735,13 +743,13 @@
         </profile>
     </profiles>
     <modules>
+        <module>paascloud-common</module>
         <module>paascloud-eureka</module>
         <module>paascloud-discovery</module>
         <module>paascloud-monitor</module>
         <!--        <module>paascloud-zipkin</module>-->
-        <!--        <module>paascloud-gateway</module>-->
+        <module>paascloud-gateway</module>
         <!--        <module>paascloud-provider-api</module>-->
-        <!--        <module>paascloud-common</module>-->
         <!--        <module>paascloud-provider</module>-->
         <!--        <module>paascloud-generator</module>-->
     </modules>

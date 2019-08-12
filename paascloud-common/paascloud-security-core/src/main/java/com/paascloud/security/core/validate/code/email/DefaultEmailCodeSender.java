@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 默认的短信验证码发送器
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Slf4j
 public class DefaultEmailCodeSender implements EmailCodeSender {

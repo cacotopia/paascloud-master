@@ -18,7 +18,7 @@ import javax.annotation.Resource;
 /**
  * The class Tpc mq message feign client.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @RestController
 @Api(value = "API - TpcMqMessageFeignClient", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

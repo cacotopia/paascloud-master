@@ -22,7 +22,7 @@ import com.paascloud.security.core.social.support.SocialAuthenticationFilterPost
 /**
  * 社交登录配置主类
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Configuration
 @EnableSocial

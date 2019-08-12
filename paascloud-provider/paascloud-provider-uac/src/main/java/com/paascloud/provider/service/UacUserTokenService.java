@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 登录jwt token 管理.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public interface UacUserTokenService extends IService<UacUserToken> {
 	/**

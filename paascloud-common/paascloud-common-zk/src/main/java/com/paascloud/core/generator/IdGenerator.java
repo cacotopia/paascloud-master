@@ -3,7 +3,7 @@ package com.paascloud.core.generator;
 /**
  * The interface Id generator.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public interface IdGenerator {
 

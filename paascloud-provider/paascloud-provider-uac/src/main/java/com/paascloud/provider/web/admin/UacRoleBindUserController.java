@@ -19,7 +19,7 @@ import javax.annotation.Resource;
 /**
  * 角色绑定用户.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @RestController
 @RequestMapping(value = "/role", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

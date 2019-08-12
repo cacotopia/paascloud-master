@@ -12,7 +12,7 @@
 ///**
 // * 定时清理无效OSS文件.
 // *
-// * @author paascloud.net @gmail.com
+// * @author walkman
 // */
 //@Slf4j
 //@ElasticJobConfig(cron = "0 0 0 1/1 * ?")

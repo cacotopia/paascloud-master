@@ -14,14 +14,16 @@ import java.net.InetAddress;
 /**
  * The class Redis init runner.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Component
 @Order
 @Slf4j
 public class ZookeeperInitRunner implements CommandLineRunner {
+
 	@Resource
 	private PaascloudProperties paascloudProperties;
+
 	@Value("${spring.application.name}")
 	private String applicationName;
 

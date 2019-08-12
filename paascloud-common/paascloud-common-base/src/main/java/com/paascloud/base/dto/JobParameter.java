@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * The class Job task model.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public class JobParameter implements Serializable {
 	private static final long serialVersionUID = -610797345091216847L;

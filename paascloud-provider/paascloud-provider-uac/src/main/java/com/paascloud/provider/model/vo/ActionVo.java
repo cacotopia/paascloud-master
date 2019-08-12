@@ -8,7 +8,7 @@ import lombok.EqualsAndHashCode;
 /**
  * The class Action vo.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

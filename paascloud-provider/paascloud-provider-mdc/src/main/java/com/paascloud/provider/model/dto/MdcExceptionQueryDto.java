@@ -14,7 +14,7 @@ import java.util.Date;
 /**
  * The class Mdc exception query dto.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

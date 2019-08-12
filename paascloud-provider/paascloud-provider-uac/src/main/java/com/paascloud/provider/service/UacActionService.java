@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * The interface Uac action service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public interface UacActionService extends IService<UacAction> {
 	/**

@@ -10,7 +10,7 @@ import java.util.Date;
 /**
  * The class Order doc vo.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

@@ -4,7 +4,7 @@ package com.paascloud.exception;
 /**
  * The class Http aes exception.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public class HttpAesException extends IllegalArgumentException {
 	private static final long serialVersionUID = -2489600753056921095L;

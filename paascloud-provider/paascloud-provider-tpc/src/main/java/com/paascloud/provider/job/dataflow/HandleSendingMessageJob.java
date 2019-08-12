@@ -25,7 +25,7 @@
 ///**
 // * 处理发送中的消息数据.
 // *
-// * @author paascloud.net @gmail.com
+// * @author walkman
 // */
 //@Component
 //@Slf4j

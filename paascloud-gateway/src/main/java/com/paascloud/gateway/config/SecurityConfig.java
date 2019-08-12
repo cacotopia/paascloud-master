@@ -8,26 +8,25 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 /**
  * The class Security config.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Configuration
 @EnableOAuth2Sso
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-	/**
-	 * Configure.
-	 *
-	 * @param http the http
-	 *
-	 * @throws Exception the exception
-	 */
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
+    /**
+     * Configure.
+     *
+     * @param http the http
+     * @throws Exception the exception
+     */
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
 
-		http.csrf().disable();
+        http.csrf().disable();
 
 
-	}
+    }
 
 
 }

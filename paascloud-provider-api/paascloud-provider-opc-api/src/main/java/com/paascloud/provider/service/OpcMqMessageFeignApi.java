@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * The interface Opc mq message feign api.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @FeignClient(value = "paascloud-provider-opc", configuration = OAuth2FeignAutoConfiguration.class, fallback = OpcMqMessageFeignApiHystrix.class)
 public interface OpcMqMessageFeignApi {

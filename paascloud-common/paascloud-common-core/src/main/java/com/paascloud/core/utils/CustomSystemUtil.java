@@ -11,7 +11,7 @@ import java.util.Enumeration;
 /**
  * 系统工具类，用于获取系统相关信息
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class CustomSystemUtil {

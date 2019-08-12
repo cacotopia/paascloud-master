@@ -14,7 +14,7 @@ import java.util.Map;
  *
  * @param <C> the type parameter @author walkman
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> implements ValidateCodeProcessor {
 

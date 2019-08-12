@@ -3,7 +3,7 @@ package com.paascloud.security.core.properties;
 /**
  * 认证成功后的响应方式
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public enum LoginResponseType {
 
