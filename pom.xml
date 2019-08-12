@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.liuzm.paascloud</groupId>
+    <groupId>com.supos.cloud</groupId>
     <artifactId>paascloud-master</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
@@ -379,68 +379,68 @@
             </dependency>
             <!-- paas cloud start -->
             <dependency>
-                <groupId>com.liuzm.paascloud.common</groupId>
+                <groupId>com.supos.cloud.common</groupId>
                 <artifactId>paascloud-common-base</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.common</groupId>
+                <groupId>com.supos.cloud.common</groupId>
                 <artifactId>paascloud-common-core</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.common</groupId>
+                <groupId>com.supos.cloud.common</groupId>
                 <artifactId>paascloud-common-util</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.common</groupId>
+                <groupId>com.supos.cloud.common</groupId>
                 <artifactId>paascloud-common-config</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.common</groupId>
+                <groupId>com.supos.cloud.common</groupId>
                 <artifactId>paascloud-common-zk</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.common</groupId>
+                <groupId>com.supos.cloud.common</groupId>
                 <artifactId>paascloud-security-app</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <!-- paas cloud end -->
             <dependency>
-                <groupId>com.liuzm.paascloud.provider.api</groupId>
+                <groupId>com.supos.cloud.provider.api</groupId>
                 <artifactId>paascloud-provider-uac-api</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.provider.api</groupId>
+                <groupId>com.supos.cloud.provider.api</groupId>
                 <artifactId>paascloud-provider-mdc-api</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.provider.api</groupId>
+                <groupId>com.supos.cloud.provider.api</groupId>
                 <artifactId>paascloud-provider-omc-api</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.provider.api</groupId>
+                <groupId>com.supos.cloud.provider.api</groupId>
                 <artifactId>paascloud-provider-tpc-api</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.provider.api</groupId>
+                <groupId>com.supos.cloud.provider.api</groupId>
                 <artifactId>paascloud-provider-opc-api</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.provider.api</groupId>
+                <groupId>com.supos.cloud.provider.api</groupId>
                 <artifactId>paascloud-provider-sdk-api</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud</groupId>
+                <groupId>com.supos.cloud</groupId>
                 <artifactId>elastic-job-lite-starter</artifactId>
                 <version>1.0.0</version>
             </dependency>
@@ -743,7 +743,7 @@
         </profile>
     </profiles>
     <modules>
-        <module>paascloud-common</module>
+        <module>supos-cloud-common</module>
         <module>paascloud-eureka</module>
         <module>paascloud-discovery</module>
         <module>paascloud-monitor</module>

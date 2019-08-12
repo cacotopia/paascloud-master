@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.liuzm.paascloud.provider</groupId>
+        <groupId>com.supos.cloud.provider</groupId>
         <artifactId>paascloud-provider</artifactId>
         <version>1.0.0</version>
     </parent>
@@ -64,15 +64,15 @@
             <artifactId>spring-boot-admin-starter-client</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.liuzm.paascloud.provider.api</groupId>
+            <groupId>com.supos.cloud.provider.api</groupId>
             <artifactId>paascloud-provider-mdc-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.liuzm.paascloud.provider.api</groupId>
+            <groupId>com.supos.cloud.provider.api</groupId>
             <artifactId>paascloud-provider-sdk-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.liuzm.paascloud.provider.api</groupId>
+            <groupId>com.supos.cloud.provider.api</groupId>
             <artifactId>paascloud-provider-opc-api</artifactId>
         </dependency>
     </dependencies>

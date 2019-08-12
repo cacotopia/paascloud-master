@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.supos.cloud</groupId>
+        <artifactId>paascloud-master</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <groupId>com.supos.cloud.common</groupId>
+    <artifactId>paascloud-common</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>supos-cloud-common-base</module>
+        <module>supos-cloud-common-util</module>
+        <module>supos-cloud-common-config</module>
+        <module>supos-cloud-common-core</module>
+        <module>supos-cloud-common-zk</module>
+        <module>supos-cloud-security-app</module>
+        <module>supos-cloud-security-core</module>
+        <module>supos-cloud-security-feign</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring-social.version>1.1.6.RELEASE</spring-social.version>
+        <commons-collections.version>3.2.2</commons-collections.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.social</groupId>
+                <artifactId>spring-social-core</artifactId>
+                <version>${spring-social.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.social</groupId>
+                <artifactId>spring-social-config</artifactId>
+                <version>${spring-social.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.social</groupId>
+                <artifactId>spring-social-security</artifactId>
+                <version>${spring-social.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.social</groupId>
+                <artifactId>spring-social-web</artifactId>
+                <version>${spring-social.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>${commons-collections.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>

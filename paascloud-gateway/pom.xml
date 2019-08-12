@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.liuzm.paascloud</groupId>
+        <groupId>com.supos.cloud</groupId>
         <artifactId>paascloud-master</artifactId>
         <version>1.0.0</version>
     </parent>
-    <groupId>com.liuzm.paascloud.gateway</groupId>
+    <groupId>com.supos.cloud.gateway</groupId>
     <artifactId>paascloud-gateway</artifactId>
     <packaging>jar</packaging>
     <name>paascloud-gateway</name>
@@ -73,16 +73,16 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>com.liuzm.paascloud.common</groupId>
+            <groupId>com.supos.cloud.common</groupId>
             <artifactId>paascloud-common-util</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.liuzm.paascloud.common</groupId>
+            <groupId>com.supos.cloud.common</groupId>
             <artifactId>paascloud-common-core</artifactId>
         </dependency>
     </dependencies>
     <build>
-        <finalName>${artifactId}</finalName>
+        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

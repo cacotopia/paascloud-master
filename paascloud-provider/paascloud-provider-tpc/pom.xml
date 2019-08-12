@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.liuzm.paascloud.provider</groupId>
+        <groupId>com.supos.cloud.provider</groupId>
         <artifactId>paascloud-provider</artifactId>
         <version>1.0.0</version>
     </parent>
@@ -27,11 +27,11 @@
             <artifactId>rocketmq-client</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.liuzm.paascloud.provider.api</groupId>
+            <groupId>com.supos.cloud.provider.api</groupId>
             <artifactId>paascloud-provider-opc-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.liuzm.paascloud.provider.api</groupId>
+            <groupId>com.supos.cloud.provider.api</groupId>
             <artifactId>paascloud-provider-mdc-api</artifactId>
         </dependency>
         <dependency>
@@ -72,16 +72,16 @@
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
         <!--        <dependency>-->
-        <!--            <groupId>com.liuzm.paascloud</groupId>-->
+        <!--            <groupId>com.supos.cloud</groupId>-->
         <!--            <artifactId>elastic-job-lite-starter</artifactId>-->
         <!--            <version>1.0.0</version>-->
         <!--        </dependency>-->
         <dependency>
-            <groupId>com.liuzm.paascloud.provider.api</groupId>
+            <groupId>com.supos.cloud.provider.api</groupId>
             <artifactId>paascloud-provider-tpc-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.liuzm.paascloud.provider.api</groupId>
+            <groupId>com.supos.cloud.provider.api</groupId>
             <artifactId>paascloud-provider-uac-api</artifactId>
         </dependency>
         <dependency>

@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.liuzm.paascloud.zipkin</groupId>
+    <groupId>com.supos.cloud.zipkin</groupId>
     <artifactId>paascloud-zipkin</artifactId>
     <packaging>jar</packaging>
 
@@ -11,7 +11,7 @@
     <description>微服务链路追踪</description>
 
     <parent>
-        <groupId>com.liuzm.paascloud</groupId>
+        <groupId>com.supos.cloud</groupId>
         <artifactId>paascloud-master</artifactId>
         <version>1.0.0</version>
     </parent>
