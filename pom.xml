@@ -22,6 +22,35 @@
         </developer>
     </developers>
 
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <profileActive>dev</profileActive>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>pro</id>
+            <properties>
+                <profileActive>pro</profileActive>
+            </properties>
+        </profile>
+    </profiles>
+    <modules>
+        <module>supos-cloud-common</module>
+        <module>supos-cloud-eureka</module>
+        <module>supos-cloud-discovery</module>
+        <module>supos-cloud-monitor</module>
+        <!--        <module>supos-cloud-zipkin</module>-->
+        <module>supos-cloud-gateway</module>
+        <module>supos-cloud-provider-api</module>
+        <module>supos-cloud-provider</module>
+        <!--        <module>paascloud-generator</module>-->
+    </modules>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -47,12 +76,14 @@
         <mapper.version>3.4.0</mapper.version>
         <mapper-spring-boot-starter.version>2.1.5</mapper-spring-boot-starter.version>
         <springframework.version>5.0.7.RELEASE</springframework.version>
-        <!--        <spring-boot.version>4.3.11.RELEASE</spring-boot.version>-->
+        <spring-boot.version>4.3.11.RELEASE</spring-boot.version>
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
         <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
         <!--        <spring-security.version>4.3.11.RELEASE</spring-security.version>-->
         <spring-security-jwt.version>1.0.10.RELEASE</spring-security-jwt.version>
         <springfox.version>2.9.2</springfox.version>
+        <spring-social.version>1.1.6.RELEASE</spring-social.version>
+        <commons-collections.version>3.2.2</commons-collections.version>
         <spring-boot-starter-swagger.version>1.4.1.RELEASE</spring-boot-starter-swagger.version>
         <swagger-butler-core.version>2.0.0</swagger-butler-core.version>
         <paascloud.version>1.0.0</paascloud.version>
@@ -87,16 +118,16 @@
         <logback.version>1.2.3</logback.version>
         <logstash-logback-encoder.version>6.1</logstash-logback-encoder.version>
         <logback-kafka-appender.version>0.2.0</logback-kafka-appender.version>
+        <zipkin.version>2.12.9</zipkin.version>
         <jedis.version>3.1.0</jedis.version>
         <redisson.version>3.11.2</redisson.version>
-        <maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
-        <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
-        <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-        <maven-javadoc-plugin.version>3.1.1</maven-javadoc-plugin.version>
         <maven-source-plugin.version>3.1.0</maven-source-plugin.version>
+        <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
+        <maven-javadoc-plugin.version>3.1.1</maven-javadoc-plugin.version>
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
         <maven-jar-plugin.version>3.1.2</maven-jar-plugin.version>
+        <maven-site-plugin.version>3.8.2</maven-site-plugin.version>
         <dockerfile-maven-plugin.version>1.4.12</dockerfile-maven-plugin.version>
         <dockerfile-maven-plugin.version>1.0.0</dockerfile-maven-plugin.version>
         <dockerFileDir>src/main/java/docker</dockerFileDir>
@@ -165,6 +196,26 @@
                 <version>${springfox.version}</version>
             </dependency>
             <!-- swagger cloud end -->
+            <dependency>
+                <groupId>org.springframework.social</groupId>
+                <artifactId>spring-social-core</artifactId>
+                <version>${spring-social.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.social</groupId>
+                <artifactId>spring-social-config</artifactId>
+                <version>${spring-social.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.social</groupId>
+                <artifactId>spring-social-security</artifactId>
+                <version>${spring-social.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.social</groupId>
+                <artifactId>spring-social-web</artifactId>
+                <version>${spring-social.version}</version>
+            </dependency>
             <!-- commons Start -->
             <dependency>
                 <groupId>commons-codec</groupId>
@@ -419,32 +470,32 @@
             <!-- paas cloud end -->
             <dependency>
                 <groupId>com.supos.cloud.provider.api</groupId>
-                <artifactId>paascloud-provider-uac-api</artifactId>
+                <artifactId>supos-cloud-provider-uac-api</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.supos.cloud.provider.api</groupId>
-                <artifactId>paascloud-provider-mdc-api</artifactId>
+                <artifactId>supos-cloud-provider-mdc-api</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.supos.cloud.provider.api</groupId>
-                <artifactId>paascloud-provider-omc-api</artifactId>
+                <artifactId>supos-cloud-provider-omc-api</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.supos.cloud.provider.api</groupId>
-                <artifactId>paascloud-provider-tpc-api</artifactId>
+                <artifactId>supos-cloud-provider-tpc-api</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.supos.cloud.provider.api</groupId>
-                <artifactId>paascloud-provider-opc-api</artifactId>
+                <artifactId>supos-cloud-provider-opc-api</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.supos.cloud.provider.api</groupId>
-                <artifactId>paascloud-provider-sdk-api</artifactId>
+                <artifactId>supos-cloud-provider-sdk-api</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
@@ -606,10 +657,16 @@
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
+            <!-- zipkin -->
+            <dependency>
+                <groupId>io.zipkin.java</groupId>
+                <artifactId>zipkin-autoconfigure-collector-kafka</artifactId>
+                <version>${zipkin.version}</version>
+            </dependency>
             <dependency>
                 <groupId>io.zipkin.java</groupId>
                 <artifactId>zipkin-autoconfigure-collector-rabbitmq</artifactId>
-                <version>2.3.1</version>
+                <version>${zipkin.version}</version>
             </dependency>
             <!-- Logging Start -->
             <dependency>
@@ -688,7 +745,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>${maven-javadoc-plugin.version>}</version>
+                    <version>${maven-javadoc-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -706,6 +763,11 @@
                     <version>${maven-jar-plugin.version}</version>
                 </plugin>
                 <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>${maven-site-plugin.version}</version>
+                </plugin>
+                <plugin>
                     <groupId>com.spotify</groupId>
                     <artifactId>dockerfile-maven-plugin</artifactId>
                     <version>${dockerfile-maven-plugin.version}</version>
@@ -713,37 +775,14 @@
                 <plugin>
                     <groupId>com.spotify</groupId>
                     <artifactId>docker-maven-plugin</artifactId>
-                    <version>0.4.13</version>
+                    <version>1.2.0</version>
                 </plugin>
+                <!--                <plugin>-->
+                <!--                    <groupId>com.spotify</groupId>-->
+                <!--                    <artifactId>docker-maven-plugin</artifactId>-->
+                <!--                    <version>0.4.13</version>-->
+                <!--                </plugin>-->
             </plugins>
         </pluginManagement>
     </build>
-    <profiles>
-        <profile>
-            <id>dev</id>
-            <properties>
-                <profileActive>dev</profileActive>
-            </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        </profile>
-        <profile>
-            <id>pro</id>
-            <properties>
-                <profileActive>pro</profileActive>
-            </properties>
-        </profile>
-    </profiles>
-    <modules>
-        <module>supos-cloud-common</module>
-        <module>paascloud-eureka</module>
-        <module>paascloud-discovery</module>
-        <module>paascloud-monitor</module>
-        <!--        <module>paascloud-zipkin</module>-->
-        <module>paascloud-gateway</module>
-        <!--        <module>paascloud-provider-api</module>-->
-        <!--        <module>paascloud-provider</module>-->
-        <!--        <module>paascloud-generator</module>-->
-    </modules>
 </project>

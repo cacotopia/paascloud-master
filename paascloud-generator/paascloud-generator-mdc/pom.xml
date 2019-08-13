@@ -19,8 +19,8 @@
         <!-- MyBatis Generator -->
         <!-- Java接口和实体类 -->
         <targetJavaProject>${basedir}/src/main/java</targetJavaProject>
-        <targetMapperPackage>com.paascloud.provider.mapper</targetMapperPackage>
-        <targetModelPackage>com.paascloud.provider.model.domain</targetModelPackage>
+        <targetMapperPackage>com.supos.cloud.provider.mapper</targetMapperPackage>
+        <targetModelPackage>com.supos.cloud.provider.model.domain</targetModelPackage>
         <!-- XML生成路径 -->
         <targetResourcesProject>${basedir}/src/main/resources</targetResourcesProject>
         <targetXMLPackage>mapper</targetXMLPackage>

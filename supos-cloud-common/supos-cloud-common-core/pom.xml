@@ -8,7 +8,7 @@
         <artifactId>supos-cloud-common</artifactId>
         <version>1.0.0</version>
     </parent>
-    <artifactId>paascloud-common-core</artifactId>
+    <artifactId>supos-cloud-common-core</artifactId>
     <version>1.0.0</version>
     <dependencies>
         <dependency>

@@ -18,7 +18,7 @@
                 <property name="forceBigDecimals" value="false"/>
             </javaTypeResolver>
             <!-- 生成模型的包名和位置 -->
-            <javaModelGenerator targetPackage="com.paascloud.provider.model.domain" targetProject="D:\git\liuzm-git\paascloud-git\paascloud-master\paascloud-generator\paascloud-generator-opt\src\main\java">
+            <javaModelGenerator targetPackage="com.supos.cloud.provider.model.domain" targetProject="D:\git\liuzm-git\paascloud-git\paascloud-master\paascloud-generator\paascloud-generator-opt\src\main\java">
                 <property name="enableSubPackages" value="true"/>
                 <property name="trimStrings" value="true"/>
             </javaModelGenerator>
@@ -27,7 +27,7 @@
                 <property name="enableSubPackages" value="true"/>
             </sqlMapGenerator>
             <!-- 生成DAO的包名和位置 -->
-            <javaClientGenerator type="XMLMAPPER" targetPackage="com.paascloud.provider.mapper" targetProject="D:\git\liuzm-git\paascloud-git\paascloud-master\paascloud-generator\paascloud-generator-opt\src\main\java">
+            <javaClientGenerator type="XMLMAPPER" targetPackage="com.supos.cloud.provider.mapper" targetProject="D:\git\liuzm-git\paascloud-git\paascloud-master\paascloud-generator\paascloud-generator-opt\src\main\java">
                 <property name="enableSubPackages" value="true"/>
             </javaClientGenerator>
             <!-- 要生成哪些表 -->

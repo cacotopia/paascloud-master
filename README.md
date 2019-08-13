@@ -35,43 +35,43 @@
 │  │
 │  ├─paascloud-gateway--------------------------微服务网关中心
 │  │
-│  ├─paascloud-provider
+│  ├─supos-cloud-provider
 │  │  │
-│  │  ├─paascloud-provider-mdc------------------数据服务中心
+│  │  ├─supos-cloud-provider-mdc------------------数据服务中心
 │  │  │
-│  │  ├─paascloud-provider-omc------------------订单服务中心
+│  │  ├─supos-cloud-provider-omc------------------订单服务中心
 │  │  │
-│  │  ├─paascloud-provider-opc------------------对接服务中心
+│  │  ├─supos-cloud-provider-opc------------------对接服务中心
 │  │  │
-│  │  ├─paascloud-provider-tpc------------------任务服务中心
+│  │  ├─supos-cloud-provider-tpc------------------任务服务中心
 │  │  │
-│  │  └─paascloud-provider-uac------------------用户服务中心
+│  │  └─supos-cloud-provider-uac------------------用户服务中心
 │  │
-│  ├─paascloud-provider-api
+│  ├─supos-cloud-provider-api
 │  │  │
-│  │  ├─paascloud-provider-mdc-api------------------数据服务中心API
+│  │  ├─supos-cloud-provider-mdc-api------------------数据服务中心API
 │  │  │
-│  │  ├─paascloud-provider-omc-api------------------订单服务中心API
+│  │  ├─supos-cloud-provider-omc-api------------------订单服务中心API
 │  │  │
-│  │  ├─paascloud-provider-opc-api------------------对接服务中心API
+│  │  ├─supos-cloud-provider-opc-api------------------对接服务中心API
 │  │  │
-│  │  ├─paascloud-provider-tpc-api------------------任务服务中心API
+│  │  ├─supos-cloud-provider-tpc-api------------------任务服务中心API
 │  │  │
-│  │  ├─paascloud-provider-sdk-api------------------可靠消息服务API
+│  │  ├─supos-cloud-provider-sdk-api------------------可靠消息服务API
 │  │  │
-│  │  └─paascloud-provider-uac-api------------------用户服务中心API
+│  │  └─supos-cloud-provider-uac-api------------------用户服务中心API
 │  │
-│  ├─paascloud-common
+│  ├─supos-cloud-common
 │  │  │
-│  │  ├─paascloud-common-base------------------公共POJO基础包
+│  │  ├─supos-cloud-common-base------------------公共POJO基础包
 │  │  │
-│  │  ├─paascloud-common-config------------------公共配置包
+│  │  ├─supos-cloud-common-config------------------公共配置包
 │  │  │
-│  │  ├─paascloud-common-core------------------微服务核心依赖包
+│  │  ├─supos-cloud-common-core------------------微服务核心依赖包
 │  │  │
-│  │  ├─paascloud-common-util------------------公共工具包
+│  │  ├─supos-cloud-common-util------------------公共工具包
 │  │  │
-│  │  ├─paascloud-common-zk------------------zookeeper配置
+│  │  ├─supos-cloud-common-zk------------------zookeeper配置
 │  │  │
 │  │  ├─paascloud-security-app------------------公共无状态安全认证
 │  │  │

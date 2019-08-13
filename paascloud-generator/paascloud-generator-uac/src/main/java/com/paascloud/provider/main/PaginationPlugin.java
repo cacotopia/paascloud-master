@@ -1,4 +1,4 @@
-//package com.paascloud.provider.main;
+//package com.supos.cloud.provider.main;
 //
 //import org.mybatis.generator.api.PluginAdapter;
 //import org.mybatis.generator.api.ShellRunner;

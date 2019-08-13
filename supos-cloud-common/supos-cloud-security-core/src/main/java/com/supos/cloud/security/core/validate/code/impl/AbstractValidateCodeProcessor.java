@@ -1,6 +1,6 @@
 package com.supos.cloud.security.core.validate.code.impl;
 
-//import com.paascloud.security.core.validate.code.*;
+//import com.supos.cloud.security.core.validate.code.*;
 
 import com.supos.cloud.security.core.validate.code.*;
 import org.apache.commons.lang.StringUtils;

@@ -2,8 +2,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>com.supos.cloud</groupId>
-        <artifactId>paascloud-master</artifactId>
+        <artifactId>supos-cloud-parent</artifactId>
         <version>1.0.0</version>
+        <relativePath>../</relativePath>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -15,7 +16,7 @@
         <module>paascloud-generator-mdc</module>
         <module>paascloud-generator-omc</module>
         <module>paascloud-generator-opc</module>
-		    <module>paascloud-generator-tpc</module>
+        <module>paascloud-generator-tpc</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -28,8 +29,8 @@
         <!-- MyBatis Generator -->
         <!-- Java接口和实体类 -->
         <targetJavaProject>${basedir}/src/main/java</targetJavaProject>
-        <targetMapperPackage>com.paascloud.uac.mapper</targetMapperPackage>
-        <targetModelPackage>com.paascloud.uac.domain</targetModelPackage>
+        <targetMapperPackage>com.supos.cloud.uac.mapper</targetMapperPackage>
+        <targetModelPackage>com.supos.cloud.uac.domain</targetModelPackage>
         <!-- XML生成路径 -->
         <targetResourcesProject>${basedir}/src/main/resources</targetResourcesProject>
         <targetXMLPackage>mapper</targetXMLPackage>
@@ -77,11 +78,11 @@
             <artifactId>mapper</artifactId>
             <version>3.3.9</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.liuzm.mybatis</groupId>-->
-<!--            <artifactId>mybatis-generator</artifactId>-->
-<!--            <version>1.0.0</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.liuzm.mybatis</groupId>-->
+        <!--            <artifactId>mybatis-generator</artifactId>-->
+        <!--            <version>1.0.0</version>-->
+        <!--        </dependency>-->
     </dependencies>
     <build>
         <plugins>

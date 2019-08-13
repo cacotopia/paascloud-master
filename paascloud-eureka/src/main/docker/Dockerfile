@@ -1,9 +1,0 @@
-FROM openjdk:8-jdk-alpine
-MAINTAINER cacotopia <cacotopia@126.com>
-VOLUME /tmp
-ADD paascloud-eureka.jar /app/paascloud-eureka.jar
-RUN sh -c 'touch /app/paascloud-eureka.jar'
-ENV JAVA_OPTS=""
-WORKDIR /app/
-EXPOSE 8761
-ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app/paascloud-eureka.jar" ]
