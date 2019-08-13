@@ -21,14 +21,14 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(value = "API - OpcGaodeFeignClient", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class OpcGaodeFeignClient extends BaseController implements OpcGaodeFeignApi {
 
-	@Override
-	@ApiOperation(httpMethod = "POST", value = "根据IP获取位置信息")
-	public Wrapper<GaodeLocation> getLocationByIpAddr(@RequestParam("ipAddr") String ipAddr) {
-		String temp = "127.0.";
-		String temp2 = "192.168.";
-		if (ipAddr.startsWith(temp) || ipAddr.startsWith(temp2)) {
-			ipAddr = "111.199.188.14";
-		}
-		return WrapMapper.ok(GaoDeUtil.getCityByIpAddr(ipAddr));
-	}
+    @Override
+    @ApiOperation(httpMethod = "POST", value = "根据IP获取位置信息")
+    public Wrapper<GaodeLocation> getLocationByIpAddr(@RequestParam("ipAddr") String ipAddr) {
+        String temp = "127.0.";
+        String temp2 = "192.168.";
+        if (ipAddr.startsWith(temp) || ipAddr.startsWith(temp2)) {
+            ipAddr = "111.199.188.14";
+        }
+        return WrapMapper.ok(GaoDeUtil.getCityByIpAddr(ipAddr));
+    }
 }

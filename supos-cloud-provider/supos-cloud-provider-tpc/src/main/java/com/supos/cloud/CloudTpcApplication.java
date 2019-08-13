@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.context.annotation.Bean;
 import org.springframework.retry.annotation.EnableRetry;
@@ -25,7 +25,7 @@ import javax.sql.DataSource;
 @EnableDiscoveryClient
 @SpringBootApplication
 @EnableTransactionManagement
-public class PaasCloudTpcApplication {
+public class CloudTpcApplication {
 
     /**
      * The entry point of application.
@@ -33,7 +33,7 @@ public class PaasCloudTpcApplication {
      * @param args the input arguments
      */
     public static void main(String[] args) {
-        SpringApplication.run(PaasCloudTpcApplication.class, args);
+        SpringApplication.run(CloudTpcApplication.class, args);
     }
 
     @Bean

@@ -28,21 +28,20 @@ import javax.annotation.Resource;
 @Api(value = "Web - UacTokenMainController", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class UacTokenMainController extends BaseController {
 
-	@Resource
-	private UacUserTokenService uacUserTokenService;
+    @Resource
+    private UacUserTokenService uacUserTokenService;
 
-	/**
-	 * 分页查询角色信息.
-	 *
-	 * @param token the token
-	 *
-	 * @return the wrapper
-	 */
-	@PostMapping(value = "/queryListWithPage")
-	@ApiOperation(httpMethod = "POST", value = "查询在线用户列表")
-	public Wrapper queryUacActionListWithPage(@ApiParam(name = "token") @RequestBody TokenMainQueryDto token) {
-		logger.info("查询在线用户列表. token={}", token);
-		PageInfo pageInfo = uacUserTokenService.listTokenWithPage(token);
-		return WrapMapper.ok(pageInfo);
-	}
+    /**
+     * 分页查询角色信息.
+     *
+     * @param token the token
+     * @return the wrapper
+     */
+    @PostMapping(value = "/queryListWithPage")
+    @ApiOperation(httpMethod = "POST", value = "查询在线用户列表")
+    public Wrapper queryUacActionListWithPage(@ApiParam(name = "token") @RequestBody TokenMainQueryDto token) {
+        logger.info("查询在线用户列表. token={}", token);
+        PageInfo pageInfo = uacUserTokenService.listTokenWithPage(token);
+        return WrapMapper.ok(pageInfo);
+    }
 }

@@ -27,18 +27,19 @@ import java.util.List;
 @RestController
 @Api(value = "API - OpcMqMessageFeignClient", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class OpcMqMessageFeignClient extends BaseController implements OpcMqMessageFeignApi {
-	@Resource
-	private MqMessageService mqMessageService;
 
-	@Override
-	@ApiOperation(httpMethod = "POST", value = "查询含有的messageKey")
-	public Wrapper<List<String>> queryMessageKeyList(@RequestParam("messageKeyList") List<String> messageKeyList) {
-		logger.info("查询消息KEY. messageKeyList={}", messageKeyList);
-		return WrapMapper.ok(mqMessageService.queryMessageKeyList(messageKeyList));
-	}
+    @Resource
+    private MqMessageService mqMessageService;
 
-	@Override
-	public Wrapper<PageInfo<MqMessageVo>> queryMessageListWithPage(@RequestBody MessageQueryDto messageQueryDto) {
-		return mqMessageService.queryMessageListWithPage(messageQueryDto);
-	}
+    @Override
+    @ApiOperation(httpMethod = "POST", value = "查询含有的messageKey")
+    public Wrapper<List<String>> queryMessageKeyList(@RequestParam("messageKeyList") List<String> messageKeyList) {
+        logger.info("查询消息KEY. messageKeyList={}", messageKeyList);
+        return WrapMapper.ok(mqMessageService.queryMessageKeyList(messageKeyList));
+    }
+
+    @Override
+    public Wrapper<PageInfo<MqMessageVo>> queryMessageListWithPage(@RequestBody MessageQueryDto messageQueryDto) {
+        return mqMessageService.queryMessageListWithPage(messageQueryDto);
+    }
 }

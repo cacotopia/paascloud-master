@@ -8,6 +8,7 @@ import com.supos.cloud.base.dto.LoginAuthDto;
 import com.supos.cloud.base.enums.ErrorCodeEnum;
 import com.supos.cloud.config.properties.PaascloudProperties;
 import com.supos.cloud.core.support.BaseService;
+import com.supos.cloud.provider.model.dto.oss.*;
 import com.supos.cloud.provider.model.exceptions.OpcBizException;
 import com.supos.cloud.provider.mapper.OptAttachmentMapper;
 import com.supos.cloud.provider.model.domain.OptAttachment;
@@ -39,10 +40,13 @@ import java.util.List;
  */
 @Service
 public class OptAttachmentServiceImpl extends BaseService<OptAttachment> implements OpcAttachmentService {
+
     @Resource
     private OptAttachmentMapper optAttachmentMapper;
+
     @Resource
     private OpcOssService optOssService;
+
     @Resource
     private PaascloudProperties paascloudProperties;
 
@@ -60,7 +64,6 @@ public class OptAttachmentServiceImpl extends BaseService<OptAttachment> impleme
             if (fileList.isEmpty()) {
                 return result;
             }
-
             for (MultipartFile multipartFile : fileList) {
                 String fileName = multipartFile.getOriginalFilename();
                 if (PublicUtil.isEmpty(fileName)) {
