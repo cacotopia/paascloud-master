@@ -25,7 +25,7 @@ import java.util.List;
 /**
  * 生产者管理.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @RestController
 @RequestMapping(value = "/producer", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

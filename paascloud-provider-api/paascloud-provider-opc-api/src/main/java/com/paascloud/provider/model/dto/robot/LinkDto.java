@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * The class Link dto.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 @ApiModel(value = "link类型")

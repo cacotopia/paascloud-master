@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * The interface Uac user mapper.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Mapper
 @Component

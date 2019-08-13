@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * The class Mdc web mvc config.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Configuration
 @EnableWebMvc

@@ -3,7 +3,7 @@ package com.paascloud.provider.model.enums;
 /**
  * Rocketmq默认延时级别.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public enum DelayLevelEnum {
 	/**

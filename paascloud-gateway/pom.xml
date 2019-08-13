@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.liuzm.paascloud</groupId>
+        <groupId>com.supos.cloud</groupId>
         <artifactId>paascloud-master</artifactId>
         <version>1.0.0</version>
     </parent>
-    <groupId>com.liuzm.paascloud.gateway</groupId>
+    <groupId>com.supos.cloud.gateway</groupId>
     <artifactId>paascloud-gateway</artifactId>
     <packaging>jar</packaging>
     <name>paascloud-gateway</name>
@@ -40,7 +40,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zuul</artifactId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -58,7 +58,6 @@
         <dependency>
             <groupId>com.didispace</groupId>
             <artifactId>swagger-butler-core</artifactId>
-            <version>1.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.amqp</groupId>
@@ -74,16 +73,16 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>com.liuzm.paascloud.common</groupId>
+            <groupId>com.supos.cloud.common</groupId>
             <artifactId>paascloud-common-util</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.liuzm.paascloud.common</groupId>
+            <groupId>com.supos.cloud.common</groupId>
             <artifactId>paascloud-common-core</artifactId>
         </dependency>
     </dependencies>
     <build>
-        <finalName>${artifactId}</finalName>
+        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

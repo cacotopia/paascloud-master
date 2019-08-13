@@ -10,7 +10,7 @@ import java.util.Date;
 /**
  * The class Tpc mq confirm.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 @Alias("tpcMqConfirm")

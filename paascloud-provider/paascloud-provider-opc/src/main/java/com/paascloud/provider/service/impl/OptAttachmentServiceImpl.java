@@ -36,7 +36,7 @@ import java.util.List;
 /**
  * The class Opt attachment service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Service
 public class OptAttachmentServiceImpl extends BaseService<OptAttachment> implements OpcAttachmentService {

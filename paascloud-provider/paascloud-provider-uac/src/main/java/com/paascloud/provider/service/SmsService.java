@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * The interface Sms service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public interface SmsService {
 	/**

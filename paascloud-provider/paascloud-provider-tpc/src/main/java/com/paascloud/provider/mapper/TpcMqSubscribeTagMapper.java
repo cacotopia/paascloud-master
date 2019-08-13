@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 /**
  * The interface Tpc mq subscribe tag mapper.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Mapper
 @Component

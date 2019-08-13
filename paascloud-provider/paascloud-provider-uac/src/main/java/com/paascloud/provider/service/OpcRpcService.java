@@ -3,7 +3,7 @@ package com.paascloud.provider.service;
 /**
  * The interface Opc rpc service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public interface OpcRpcService {
 

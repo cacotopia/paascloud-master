@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * The class Tpc mq message dto.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 public class TpcMqMessageDto implements Serializable {

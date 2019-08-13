@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * The interface Omc cart feign api.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @FeignClient(value = "paascloud-provider-omc", configuration = OAuth2FeignAutoConfiguration.class, fallback = OmcCartFeignHystrix.class)
 public interface OmcCartFeignApi {

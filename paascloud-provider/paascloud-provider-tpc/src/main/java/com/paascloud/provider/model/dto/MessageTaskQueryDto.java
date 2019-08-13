@@ -6,7 +6,7 @@ import lombok.Data;
 /**
  * The class Message task query dto.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 public class MessageTaskQueryDto {

@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * The interface Omc order detail query feign api.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @FeignClient(value = "paascloud-provider-omc", configuration = OAuth2FeignAutoConfiguration.class, fallback = OmcOrderDetailQueryFeignHystrix.class)
 public interface OmcOrderDetailQueryFeignApi {

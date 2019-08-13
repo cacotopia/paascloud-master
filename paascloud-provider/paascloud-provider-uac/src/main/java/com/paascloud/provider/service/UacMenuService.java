@@ -14,7 +14,7 @@ import java.util.Set;
 /**
  * The interface Uac menu service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public interface UacMenuService extends IService<UacMenu> {
 	/**

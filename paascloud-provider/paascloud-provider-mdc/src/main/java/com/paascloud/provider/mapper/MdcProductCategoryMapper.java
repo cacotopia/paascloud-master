@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * The interface Mdc product category mapper.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Mapper
 @Component

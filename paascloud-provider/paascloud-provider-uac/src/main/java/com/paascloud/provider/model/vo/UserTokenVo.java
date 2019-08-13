@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * The class User token vo.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

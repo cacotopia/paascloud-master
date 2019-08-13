@@ -11,7 +11,7 @@
     <description>开放平台中心 - Open platform center</description>
 
     <parent>
-        <groupId>com.liuzm.paascloud.provider</groupId>
+        <groupId>com.supos.cloud.provider</groupId>
         <artifactId>paascloud-provider</artifactId>
         <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
@@ -72,7 +72,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-feign</artifactId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -99,19 +99,19 @@
             <artifactId>kaptcha</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.liuzm.paascloud.provider.api</groupId>
+            <groupId>com.supos.cloud.provider.api</groupId>
             <artifactId>paascloud-provider-opc-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.liuzm.paascloud.provider.api</groupId>
+            <groupId>com.supos.cloud.provider.api</groupId>
             <artifactId>paascloud-provider-sdk-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.liuzm.paascloud.provider.api</groupId>
+            <groupId>com.supos.cloud.provider.api</groupId>
             <artifactId>paascloud-provider-omc-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.liuzm.paascloud.provider.api</groupId>
+            <groupId>com.supos.cloud.provider.api</groupId>
             <artifactId>paascloud-provider-mdc-api</artifactId>
         </dependency>
     </dependencies>

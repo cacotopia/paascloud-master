@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The interface Uac user service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public interface UacUserService extends IService<UacUser> {
 	/**

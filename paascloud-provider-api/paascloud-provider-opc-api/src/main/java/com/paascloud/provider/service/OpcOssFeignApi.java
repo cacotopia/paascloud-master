@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * The interface Opc oss feign api.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @FeignClient(value = "paascloud-provider-opc", configuration = OAuth2FeignAutoConfiguration.class, fallback = OpcOssFeignApiHystrix.class)
 public interface OpcOssFeignApi {
@@ -72,7 +72,7 @@ public interface OpcOssFeignApi {
 	/**
 	 * The class Multipart support config.
 	 *
-	 * @author paascloud.net @gmail.com
+	 * @author walkman
 	 */
 	class MultipartSupportConfig {
 		/**

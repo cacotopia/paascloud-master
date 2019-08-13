@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * The class Mdc mq message api hystrix.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Component
 public class MdcMqMessageApiHystrix implements MdcMqMessageFeignApi {

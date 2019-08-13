@@ -10,7 +10,7 @@ import java.io.Serializable;
 /**
  * The class Markdown dto.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 @ApiModel(value = "link类型")

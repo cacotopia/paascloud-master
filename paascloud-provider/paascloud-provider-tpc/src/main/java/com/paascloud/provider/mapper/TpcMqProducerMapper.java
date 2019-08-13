@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * The interface Tpc mq producer mapper.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Mapper
 @Component

@@ -6,7 +6,7 @@ import com.paascloud.provider.model.vo.ProductDetailVo;
 /**
  * The interface Mdc product service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public interface MdcProductService {
     /**

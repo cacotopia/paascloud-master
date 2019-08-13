@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * Mq 消息.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @RestController
 @Api(value = "API - MdcMqMessageFeignClient", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

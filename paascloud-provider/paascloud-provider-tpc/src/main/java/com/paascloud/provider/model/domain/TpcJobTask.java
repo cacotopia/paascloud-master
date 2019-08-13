@@ -10,7 +10,7 @@ import java.util.Date;
 /**
  * The class Tpc job task.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 @Table(name = "pc_tpc_job_task")

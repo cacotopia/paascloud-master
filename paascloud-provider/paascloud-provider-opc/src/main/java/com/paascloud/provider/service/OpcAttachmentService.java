@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * The interface Opc attachment service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public interface OpcAttachmentService extends IService<OptAttachment> {
 	/**

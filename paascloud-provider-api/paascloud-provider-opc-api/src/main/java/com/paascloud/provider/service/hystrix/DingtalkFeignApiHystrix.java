@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 /**
  * The class Chat robot feign api hystrix.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Component
 public class DingtalkFeignApiHystrix implements DingtalkFeignApi {

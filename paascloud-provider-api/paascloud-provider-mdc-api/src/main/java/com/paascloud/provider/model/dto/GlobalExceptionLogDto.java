@@ -16,7 +16,7 @@ import java.util.Date;
 /**
  * The class Global exception log dto.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 @NoArgsConstructor

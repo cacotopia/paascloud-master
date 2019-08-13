@@ -7,7 +7,7 @@ import lombok.EqualsAndHashCode;
 /**
  * The class Role vo.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

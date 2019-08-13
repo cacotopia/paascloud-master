@@ -12,7 +12,7 @@ import javax.persistence.Table;
 /**
  * The class Tpc mq consumer tag.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

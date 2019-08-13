@@ -52,7 +52,7 @@ import java.util.Map;
 /**
  * The class Ptc alipay service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Slf4j
 @Service

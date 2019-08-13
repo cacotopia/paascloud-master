@@ -3,7 +3,7 @@ package com.paascloud.provider.model.enums;
 /**
  * The enum Mq send status enum.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public enum MqSendStatusEnum {
 	/**

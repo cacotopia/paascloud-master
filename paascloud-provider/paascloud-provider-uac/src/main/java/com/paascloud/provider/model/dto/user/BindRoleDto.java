@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * The class Bind role dto.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 @ApiModel(value = "绑定的用户信息")

@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * 一级菜单下绑定子菜单个数
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 public class MenuCountVo {

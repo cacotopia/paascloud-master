@@ -10,7 +10,7 @@ import java.util.Properties;
 /**
  * The class Captcha config.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Configuration
 public class CaptchaConfig {

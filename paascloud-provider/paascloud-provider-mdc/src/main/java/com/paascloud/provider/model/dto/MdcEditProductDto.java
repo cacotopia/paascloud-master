@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * The class Mdc edit category dto.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 public class MdcEditProductDto implements Serializable {

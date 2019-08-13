@@ -15,7 +15,7 @@ import org.apache.rocketmq.common.message.Message;
 /**
  * The class Rocket mq producer.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Slf4j
 @NoArgsConstructor(access = AccessLevel.PRIVATE)

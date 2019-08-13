@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * The class Mdc dict main controller.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @RestController
 @RequestMapping(value = "/product", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

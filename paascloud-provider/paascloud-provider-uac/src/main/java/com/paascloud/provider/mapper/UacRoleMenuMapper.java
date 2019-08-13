@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * The interface Uac role menu mapper.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Mapper
 @Component

@@ -10,7 +10,7 @@ import java.io.Serializable;
 /**
  * The class Opt upload file req dto.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 @ApiModel(value = "OptUploadFileReqDto")

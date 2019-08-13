@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * The interface Uac permission service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public interface UacPermissionService {
 

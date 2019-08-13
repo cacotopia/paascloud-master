@@ -11,7 +11,7 @@ import java.io.Serializable;
 /**
  * 自定义机器人消息.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 @ApiModel(value = "自定义机器人消息体")

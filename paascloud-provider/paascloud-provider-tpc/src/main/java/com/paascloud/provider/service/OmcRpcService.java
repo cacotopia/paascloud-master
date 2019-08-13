@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 /**
  * The class Omc rpc service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Service
 public class OmcRpcService {

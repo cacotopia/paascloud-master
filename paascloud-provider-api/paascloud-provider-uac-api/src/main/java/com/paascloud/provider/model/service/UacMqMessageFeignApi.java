@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * The interface Uac user token feign api.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @FeignClient(value = "paascloud-provider-uac", configuration = OAuth2FeignAutoConfiguration.class, fallback = UacMqMessageApiHystrix.class)
 public interface UacMqMessageFeignApi {

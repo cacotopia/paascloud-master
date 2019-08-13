@@ -3,7 +3,7 @@ package com.paascloud.provider.model.enums;
 /**
  * The enum Mq send type enum.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public enum MqSendTypeEnum {
 	/**

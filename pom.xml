@@ -9,18 +9,19 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.liuzm.paascloud</groupId>
+    <groupId>com.supos.cloud</groupId>
     <artifactId>paascloud-master</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <developers>
         <developer>
-            <name>刘兆明</name>
-            <url>https://paascloud.net</url>
-            <email>paascloud.net@gmail.com</email>
+            <name>walkman</name>
+            <url>https://sinotopia.net</url>
+            <email>cacotopia@126.com</email>
         </developer>
     </developers>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -45,15 +46,16 @@
         <druid-spring-boot-starter.version>1.1.18</druid-spring-boot-starter.version>
         <mapper.version>3.4.0</mapper.version>
         <mapper-spring-boot-starter.version>2.1.5</mapper-spring-boot-starter.version>
-        <springframework.version>4.0.7.RELEASE</springframework.version>
+        <springframework.version>5.0.7.RELEASE</springframework.version>
         <!--        <spring-boot.version>4.3.11.RELEASE</spring-boot.version>-->
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
         <!--        <spring-security.version>4.3.11.RELEASE</spring-security.version>-->
+        <spring-security-jwt.version>1.0.10.RELEASE</spring-security-jwt.version>
         <springfox.version>2.9.2</springfox.version>
         <spring-boot-starter-swagger.version>1.4.1.RELEASE</spring-boot-starter-swagger.version>
         <swagger-butler-core.version>2.0.0</swagger-butler-core.version>
-        <paascloud.security.version>1.0</paascloud.security.version>
-        <paascloud.version>1.0</paascloud.version>
+        <paascloud.version>1.0.0</paascloud.version>
+        <paascloud.security.version>1.0.0</paascloud.security.version>
         <elastic-job.version>2.1.5</elastic-job.version>
         <curator.version>2.10.0</curator.version>
         <mysql.version>5.1.39</mysql.version>
@@ -63,11 +65,11 @@
         <httpclientutil.version>1.0</httpclientutil.version>
         <feign.form.spring.version>3.0.3</feign.form.spring.version>
         <fastjson.version>1.2.29</fastjson.version>
-        <fasterxml-jackson.version>2.8.4</fasterxml-jackson.version>
+        <fasterxml-jackson.version>2.9.6</fasterxml-jackson.version>
         <codehaus-jackson.version>1.9.13</codehaus-jackson.version>
         <gson.version>2.8.5</gson.version>
         <zxing.version>2.8.5</zxing.version>
-        <hibernate-validator.version>5.2.5.Final</hibernate-validator.version>
+        <!--        <hibernate-validator.version>6.0.10.Final</hibernate-validator.version>-->
         <fluent-validator.version>1.0.9</fluent-validator.version>
         <modelmapper.version>1.1.2</modelmapper.version>
         <rocketmq.version>4.4.0</rocketmq.version>
@@ -95,6 +97,12 @@
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
         <maven-jar-plugin.version>3.1.2</maven-jar-plugin.version>
         <dockerfile-maven-plugin.version>1.4.12</dockerfile-maven-plugin.version>
+        <dockerfile-maven-plugin.version>1.0.0</dockerfile-maven-plugin.version>
+        <dockerFileDir>src/main/java/docker</dockerFileDir>
+        <docker.image.prefix>cacotopia</docker.image.prefix>
+        <!-- aliyun  -->
+        <docker.repository>registry.cn-hangzhou.aliyuncs.com</docker.repository>
+        <docker.registry.name>sinotopia</docker.registry.name>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -310,16 +318,16 @@
                 <version>${HikariCP.version}</version>
             </dependency>
             <!-- validator -->
-            <dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-validator</artifactId>
-                <version>${hibernate-validator.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.baidu.unbiz</groupId>
-                <artifactId>fluent-validator</artifactId>
-                <version>${fluent-validator.version}</version>
-            </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>org.hibernate</groupId>-->
+            <!--                <artifactId>hibernate-validator</artifactId>-->
+            <!--                <version>${hibernate-validator.version}</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.baidu.unbiz</groupId>-->
+            <!--                <artifactId>fluent-validator</artifactId>-->
+            <!--                <version>${fluent-validator.version}</version>-->
+            <!--            </dependency>-->
             <!-- spring framework -->
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -335,6 +343,12 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-web</artifactId>
                 <version>${springframework.version}</version>
+            </dependency>
+            <!-- spring-security  -->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-jwt</artifactId>
+                <version>${spring-security-jwt.version}</version>
             </dependency>
             <!-- apollo -->
             <dependency>
@@ -365,68 +379,68 @@
             </dependency>
             <!-- paas cloud start -->
             <dependency>
-                <groupId>com.liuzm.paascloud.common</groupId>
+                <groupId>com.supos.cloud.common</groupId>
                 <artifactId>paascloud-common-base</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.common</groupId>
+                <groupId>com.supos.cloud.common</groupId>
                 <artifactId>paascloud-common-core</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.common</groupId>
+                <groupId>com.supos.cloud.common</groupId>
                 <artifactId>paascloud-common-util</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.common</groupId>
+                <groupId>com.supos.cloud.common</groupId>
                 <artifactId>paascloud-common-config</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.common</groupId>
+                <groupId>com.supos.cloud.common</groupId>
                 <artifactId>paascloud-common-zk</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.common</groupId>
+                <groupId>com.supos.cloud.common</groupId>
                 <artifactId>paascloud-security-app</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <!-- paas cloud end -->
             <dependency>
-                <groupId>com.liuzm.paascloud.provider.api</groupId>
+                <groupId>com.supos.cloud.provider.api</groupId>
                 <artifactId>paascloud-provider-uac-api</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.provider.api</groupId>
+                <groupId>com.supos.cloud.provider.api</groupId>
                 <artifactId>paascloud-provider-mdc-api</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.provider.api</groupId>
+                <groupId>com.supos.cloud.provider.api</groupId>
                 <artifactId>paascloud-provider-omc-api</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.provider.api</groupId>
+                <groupId>com.supos.cloud.provider.api</groupId>
                 <artifactId>paascloud-provider-tpc-api</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.provider.api</groupId>
+                <groupId>com.supos.cloud.provider.api</groupId>
                 <artifactId>paascloud-provider-opc-api</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud.provider.api</groupId>
+                <groupId>com.supos.cloud.provider.api</groupId>
                 <artifactId>paascloud-provider-sdk-api</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.liuzm.paascloud</groupId>
+                <groupId>com.supos.cloud</groupId>
                 <artifactId>elastic-job-lite-starter</artifactId>
                 <version>1.0.0</version>
             </dependency>
@@ -729,13 +743,13 @@
         </profile>
     </profiles>
     <modules>
+        <module>supos-cloud-common</module>
         <module>paascloud-eureka</module>
-        <!--        <module>paascloud-discovery</module>-->
-        <!--        <module>paascloud-monitor</module>-->
+        <module>paascloud-discovery</module>
+        <module>paascloud-monitor</module>
         <!--        <module>paascloud-zipkin</module>-->
-        <!--        <module>paascloud-gateway</module>-->
+        <module>paascloud-gateway</module>
         <!--        <module>paascloud-provider-api</module>-->
-        <!--        <module>paascloud-common</module>-->
         <!--        <module>paascloud-provider</module>-->
         <!--        <module>paascloud-generator</module>-->
     </modules>

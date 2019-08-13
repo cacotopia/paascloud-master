@@ -18,7 +18,7 @@
 ///**
 // * 定时清理所有订阅者消费成功的消息数据.
 // *
-// * @author paascloud.net @gmail.com
+// * @author walkman
 // */
 //@Slf4j
 //@ElasticJobConfig(cron = "0 0 0 1/1 * ?")

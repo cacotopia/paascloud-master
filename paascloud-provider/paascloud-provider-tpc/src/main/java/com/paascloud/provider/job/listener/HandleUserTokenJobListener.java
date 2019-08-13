@@ -15,7 +15,7 @@
 ///**
 // * The class Handle user token job listener.
 // *
-// * @author paascloud.net @gmail.com
+// * @author walkman
 // */
 //@Slf4j
 //public class HandleUserTokenJobListener implements ElasticJobListener {

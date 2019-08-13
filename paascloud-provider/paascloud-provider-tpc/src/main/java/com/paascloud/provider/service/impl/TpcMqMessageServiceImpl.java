@@ -36,7 +36,7 @@ import java.util.List;
 /**
  * The class Tpc mq message service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Service
 @Slf4j

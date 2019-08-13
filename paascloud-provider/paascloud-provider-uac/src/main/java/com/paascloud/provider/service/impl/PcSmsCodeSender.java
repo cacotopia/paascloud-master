@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 /**
  * 默认的短信验证码发送器
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Slf4j
 public class PcSmsCodeSender implements SmsCodeSender {

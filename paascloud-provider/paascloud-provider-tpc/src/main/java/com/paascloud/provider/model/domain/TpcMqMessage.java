@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * The class Tpc mq message.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 @Alias(value = "tpcMqMessage")

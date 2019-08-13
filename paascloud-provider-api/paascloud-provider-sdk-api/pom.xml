@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.liuzm.paascloud.provider.api</groupId>
+        <groupId>com.supos.cloud.provider.api</groupId>
         <artifactId>paascloud-provider-api</artifactId>
         <version>1.0.0</version>
     </parent>
@@ -37,11 +37,11 @@
             <artifactId>modelmapper</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.liuzm.paascloud.provider.api</groupId>
+            <groupId>com.supos.cloud.provider.api</groupId>
             <artifactId>paascloud-provider-tpc-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.liuzm.paascloud.common</groupId>
+            <groupId>com.supos.cloud.common</groupId>
             <artifactId>paascloud-common-zk</artifactId>
         </dependency>
         <dependency>

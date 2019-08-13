@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * The class Mq producer bean factory.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public class MqProducerBeanFactory {
 

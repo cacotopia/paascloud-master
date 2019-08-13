@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * The class Mdc edit category dto.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Data
 public class MdcEditCategoryDto implements Serializable {

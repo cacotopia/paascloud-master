@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 /**
  * 用户token.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @RestController
 @Api(value = "API - UacUserTokenFeignClient", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

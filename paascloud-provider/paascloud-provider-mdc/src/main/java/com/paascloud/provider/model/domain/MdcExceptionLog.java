@@ -12,7 +12,7 @@ import java.util.Date;
 /**
  * The class Mdc exception log.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Alias("mdcExceptionLog")
 @Table(name = "pc_mdc_exception_log")

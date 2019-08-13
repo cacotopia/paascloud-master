@@ -16,7 +16,7 @@ import java.io.IOException;
 /**
  * APP环境下认证失败处理器
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Component("pcAuthenticationFailureHandler")
 public class PcAuthenticationFailureHandler extends SimpleUrlAuthenticationFailureHandler {

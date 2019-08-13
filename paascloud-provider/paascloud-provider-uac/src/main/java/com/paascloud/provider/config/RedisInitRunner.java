@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 /**
  * The class Redis init runner.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @Component
 @Order(value = 1)

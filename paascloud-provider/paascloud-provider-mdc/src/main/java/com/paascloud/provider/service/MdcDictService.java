@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * The interface Mdc dict service.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 public interface MdcDictService extends IService<MdcDict> {
 

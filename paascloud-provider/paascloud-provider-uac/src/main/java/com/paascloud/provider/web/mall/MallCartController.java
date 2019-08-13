@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * 购物车管理.
  *
- * @author paascloud.net @gmail.com
+ * @author walkman
  */
 @RestController
 @RequestMapping(value = "/cart", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

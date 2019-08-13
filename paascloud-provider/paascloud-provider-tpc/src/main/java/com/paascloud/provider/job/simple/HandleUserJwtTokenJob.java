@@ -12,7 +12,7 @@
 ///**
 // * The class Spring simple job.
 // *
-// * @author paascloud.net @gmail.com
+// * @author walkman
 // */
 //@Slf4j
 //@ElasticJobConfig(cron = "0 0/30 * * * ?")
