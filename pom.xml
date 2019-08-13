@@ -729,7 +729,7 @@
         </profile>
     </profiles>
     <modules>
-                <module>paascloud-eureka</module>
+        <module>paascloud-eureka</module>
         <!--        <module>paascloud-discovery</module>-->
         <!--        <module>paascloud-monitor</module>-->
         <!--        <module>paascloud-zipkin</module>-->
