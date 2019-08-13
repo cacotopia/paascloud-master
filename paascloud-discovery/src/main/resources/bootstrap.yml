@@ -16,12 +16,12 @@ spring:
       preferredNetworks:
         - 192.168
 
-encrypt:
-  key-store:
-    location: classpath:/server.jks
-    password: paascloud-storepass
-    alias: paascloud-key-store
-    secret: paascloud-keypass
+#encrypt:
+#  key-store:
+#    location: classpath:/server.jks
+#    password: paascloud-storepass
+#    alias: paascloud-key-store
+#    secret: paascloud-keypass
 
 eureka:
   instance:

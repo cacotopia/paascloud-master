@@ -5,11 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.supos.cloud.common</groupId>
-        <artifactId>paascloud-common</artifactId>
+        <artifactId>supos-cloud-common</artifactId>
         <version>1.0.0</version>
+        <relativePath>..</relativePath>
     </parent>
 
-    <artifactId>paascloud-common-base</artifactId>
+    <artifactId>supos-cloud-common-base</artifactId>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -23,10 +23,10 @@ import org.springframework.web.filter.CorsFilter;
 @EnableOAuth2Sso
 @EnableHystrix
 @EnableSwaggerButler
-public class PaasCloudGatewayApplication {
+public class CloudGatewayApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PaasCloudGatewayApplication.class, args);
+		SpringApplication.run(CloudGatewayApplication.class, args);
 	}
 
 	@Bean

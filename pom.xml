@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>com.supos.cloud</groupId>
-    <artifactId>paascloud-master</artifactId>
+    <artifactId>supos-cloud-parent</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
@@ -49,6 +49,7 @@
         <springframework.version>5.0.7.RELEASE</springframework.version>
         <!--        <spring-boot.version>4.3.11.RELEASE</spring-boot.version>-->
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
         <!--        <spring-security.version>4.3.11.RELEASE</spring-security.version>-->
         <spring-security-jwt.version>1.0.10.RELEASE</spring-security-jwt.version>
         <springfox.version>2.9.2</springfox.version>
@@ -61,7 +62,7 @@
         <mysql.version>5.1.39</mysql.version>
         <guava.version>17.0</guava.version>
         <lombok.version>1.18.8</lombok.version>
-        <spring-boot-admin.version>1.5.7</spring-boot-admin.version>
+        <spring-boot-admin.version>2.0.6</spring-boot-admin.version>
         <httpclientutil.version>1.0</httpclientutil.version>
         <feign.form.spring.version>3.0.3</feign.form.spring.version>
         <fastjson.version>1.2.29</fastjson.version>
@@ -110,6 +111,13 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -380,32 +388,32 @@
             <!-- paas cloud start -->
             <dependency>
                 <groupId>com.supos.cloud.common</groupId>
-                <artifactId>paascloud-common-base</artifactId>
+                <artifactId>supos-cloud-common-base</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.supos.cloud.common</groupId>
-                <artifactId>paascloud-common-core</artifactId>
+                <artifactId>supos-cloud-common-core</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.supos.cloud.common</groupId>
-                <artifactId>paascloud-common-util</artifactId>
+                <artifactId>supos-cloud-common-util</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.supos.cloud.common</groupId>
-                <artifactId>paascloud-common-config</artifactId>
+                <artifactId>supos-cloud-common-config</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.supos.cloud.common</groupId>
-                <artifactId>paascloud-common-zk</artifactId>
+                <artifactId>supos-cloud-common-zk</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.supos.cloud.common</groupId>
-                <artifactId>paascloud-security-app</artifactId>
+                <artifactId>supos-cloud-security-app</artifactId>
                 <version>${paascloud.version}</version>
             </dependency>
             <!-- paas cloud end -->
@@ -497,7 +505,7 @@
             <!--  Spring Boot Admin Start -->
             <dependency>
                 <groupId>de.codecentric</groupId>
-                <artifactId>spring-boot-admin-server-ui-login</artifactId>
+                <artifactId>spring-boot-admin-server-ui</artifactId>
                 <version>${spring-boot-admin.version}</version>
             </dependency>
             <dependency>
@@ -507,27 +515,12 @@
             </dependency>
             <dependency>
                 <groupId>de.codecentric</groupId>
-                <artifactId>spring-boot-admin-server-ui</artifactId>
+                <artifactId>spring-boot-admin-starter-server</artifactId>
                 <version>${spring-boot-admin.version}</version>
             </dependency>
             <dependency>
                 <groupId>de.codecentric</groupId>
                 <artifactId>spring-boot-admin-starter-client</artifactId>
-                <version>${spring-boot-admin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>de.codecentric</groupId>
-                <artifactId>spring-boot-admin-server-ui-hystrix</artifactId>
-                <version>${spring-boot-admin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>de.codecentric</groupId>
-                <artifactId>spring-boot-admin-server-ui-activiti</artifactId>
-                <version>${spring-boot-admin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>de.codecentric</groupId>
-                <artifactId>spring-boot-admin-server-ui-turbine</artifactId>
                 <version>${spring-boot-admin.version}</version>
             </dependency>
             <!--  Spring Boot Admin End -->

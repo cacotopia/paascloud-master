@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.supos.cloud.common</groupId>
-        <artifactId>paascloud-common</artifactId>
+        <artifactId>supos-cloud-common</artifactId>
         <version>1.0.0</version>
     </parent>
     <artifactId>paascloud-common-core</artifactId>
@@ -76,19 +76,19 @@
         </dependency>
         <dependency>
             <groupId>com.supos.cloud.common</groupId>
-            <artifactId>paascloud-common-base</artifactId>
+            <artifactId>supos-cloud-common-base</artifactId>
         </dependency>
         <dependency>
             <groupId>com.supos.cloud.common</groupId>
-            <artifactId>paascloud-common-util</artifactId>
+            <artifactId>supos-cloud-common-util</artifactId>
         </dependency>
         <dependency>
             <groupId>com.supos.cloud.common</groupId>
-            <artifactId>paascloud-common-config</artifactId>
+            <artifactId>supos-cloud-common-config</artifactId>
         </dependency>
         <dependency>
             <groupId>com.supos.cloud.common</groupId>
-            <artifactId>paascloud-common-zk</artifactId>
+            <artifactId>supos-cloud-common-zk</artifactId>
         </dependency>
     </dependencies>
 </project>

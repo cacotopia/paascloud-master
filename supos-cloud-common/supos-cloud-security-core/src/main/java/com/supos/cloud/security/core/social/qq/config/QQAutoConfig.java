@@ -41,11 +41,12 @@ public class QQAutoConfig extends SocialConfigurerAdapter {
     @Override
     public void addConnectionFactories(ConnectionFactoryConfigurer connectionFactoryConfigurer, Environment environment) {
         super.addConnectionFactories(connectionFactoryConfigurer, environment);
-        QQProperties qqConfig = securityProperties.getSocial().getQq();
-        connectionFactoryConfigurer.addConnectionFactory(
-                new QQConnectionFactory(qqConfig.getProviderId(), qqConfig.get(), qqConfig.g()));
-        connectionFactoryConfigurer.addConnectionFactory(
-                new YConnectionFactory(yProperties.getProviderId(), yProperties.getAppId(), yProperties.getAppSecret()));
+        // TODO
+//        QQProperties qqConfig = securityProperties.getSocial().getQq();
+//        connectionFactoryConfigurer.addConnectionFactory(
+//                new QQConnectionFactory(qqConfig.getProviderId(), qqConfig.get(), qqConfig.g()));
+//        connectionFactoryConfigurer.addConnectionFactory(
+//                new YConnectionFactory(yProperties.getProviderId(), yProperties.getAppId(), yProperties.getAppSecret()));
     }
 
 

@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>com.supos.cloud.common</groupId>
-        <artifactId>paascloud-common</artifactId>
+        <artifactId>supos-cloud-common</artifactId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>paascloud-common-config</artifactId>
+    <artifactId>supos-cloud-common-config</artifactId>
     <version>1.0.0</version>
     <dependencies>
         <dependency>
@@ -22,7 +22,7 @@
         </dependency>
         <dependency>
             <groupId>com.supos.cloud.common</groupId>
-            <artifactId>paascloud-common-base</artifactId>
+            <artifactId>supos-cloud-common-base</artifactId>
         </dependency>
     </dependencies>
 </project>

@@ -47,7 +47,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <finalName>${project.name}</finalName>
-                    <mainClass>com.supos.cloud.discovery.eureka.PaasCloudEurekaApplication</mainClass>
+                    <mainClass>com.supos.cloud.discovery.eureka.CloudEurekaApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

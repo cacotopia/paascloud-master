@@ -14,7 +14,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  */
 @EnableEurekaServer
 @SpringBootApplication
-public class PaasCloudEurekaApplication {
+public class CloudEurekaApplication {
 
     /**
      * The entry point of application.
@@ -22,7 +22,7 @@ public class PaasCloudEurekaApplication {
      * @param args the input arguments
      */
     public static void main(String[] args) {
-        SpringApplication.run(PaasCloudEurekaApplication.class, args);
+        SpringApplication.run(CloudEurekaApplication.class, args);
     }
 
     @EnableWebSecurity

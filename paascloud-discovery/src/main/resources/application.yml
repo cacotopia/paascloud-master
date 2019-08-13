@@ -6,19 +6,32 @@ spring:
     active: dev
   application:
     name: @pom.artifactId@
-  rabbitmq:
-    host: paascloud-mq-rabbit
-    port: 5672
-    username: guest
-    password: guest
+#  rabbitmq:
+#    host: paascloud-mq-rabbit
+#    port: 5672
+#    username: guest
+#    password: guest
   boot:
     admin:
+      client:
+        url: http://localhost:8010
+        instance:
+          service-base-url: http://localhost:8080
       username: admin
       password: admin
   security:
     user:
       name: admin
       password: admin
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
 
 info:
   软件著作权: paascloud快速搭建企业级分布式微服务平台
