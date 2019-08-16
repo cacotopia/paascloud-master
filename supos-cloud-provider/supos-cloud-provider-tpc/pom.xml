@@ -35,8 +35,8 @@
             <artifactId>supos-cloud-provider-mdc-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>org.mariadb.jdbc</groupId>
+            <artifactId>mariadb-java-client</artifactId>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -71,11 +71,6 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>com.supos.cloud</groupId>-->
-        <!--            <artifactId>elastic-job-lite-starter</artifactId>-->
-        <!--            <version>1.0.0</version>-->
-        <!--        </dependency>-->
         <dependency>
             <groupId>com.supos.cloud.provider.api</groupId>
             <artifactId>supos-cloud-provider-tpc-api</artifactId>
@@ -89,4 +84,12 @@
             <artifactId>spring-retry</artifactId>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>

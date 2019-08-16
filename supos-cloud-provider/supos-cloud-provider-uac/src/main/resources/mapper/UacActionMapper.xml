@@ -3,118 +3,120 @@
 <mapper namespace="com.supos.cloud.provider.mapper.UacActionMapper">
     <resultMap id="BaseResultMap" type="com.supos.cloud.provider.model.domain.UacAction">
         <id column="id" jdbcType="BIGINT" property="id"/>
-        <result column="version" jdbcType="INTEGER" property="version"/>
         <result column="url" jdbcType="VARCHAR" property="url"/>
-        <result column="action_name" jdbcType="VARCHAR" property="actionName"/>
         <result column="action_code" jdbcType="VARCHAR" property="actionCode"/>
+        <result column="action_name" jdbcType="VARCHAR" property="actionName"/>
         <result column="status" jdbcType="VARCHAR" property="status"/>
         <result column="remark" jdbcType="VARCHAR" property="remark"/>
         <result column="menu_id" jdbcType="BIGINT" property="menuId"/>
-        <result column="creator" jdbcType="VARCHAR" property="creator"/>
         <result column="creator_id" jdbcType="BIGINT" property="creatorId"/>
+        <result column="creator" jdbcType="VARCHAR" property="creator"/>
         <result column="created_time" jdbcType="TIMESTAMP" property="createdTime"/>
-        <result column="last_operator" jdbcType="VARCHAR" property="lastOperator"/>
         <result column="last_operator_id" jdbcType="BIGINT" property="lastOperatorId"/>
+        <result column="last_operator" jdbcType="VARCHAR" property="lastOperator"/>
         <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="version" jdbcType="INTEGER" property="version"/>
     </resultMap>
-    <sql id="Base_Column_List" >
-        ${alias}.id, ${alias}.version, ${alias}.url, ${alias}.action_name, ${alias}.action_code, ${alias}.status, ${alias}.remark,
-        ${alias}.menu_id, ${alias}.creator, ${alias}.creator_id, ${alias}.created_time, ${alias}.last_operator, ${alias}.last_operator_id, ${alias}.update_time
+    <sql id="Base_Column_List">
+        ${alias}.id, ${alias}.version, ${alias}.url, ${alias}.action_name, ${alias}.action_code, ${alias}.status,
+        ${alias}.remark,
+        ${alias}.menu_id, ${alias}.creator, ${alias}.creator_id, ${alias}.created_time, ${alias}.last_operator,
+        ${alias}.last_operator_id, ${alias}.update_time
     </sql>
     <sql id="Base_Where_Condition">
-        <if test="_parameter != null" >
-            <where >
-                <if test="id != null" >
+        <if test="_parameter != null">
+            <where>
+                <if test="id != null">
                     AND ${alias}.id = #{id,jdbcType=BIGINT}
                 </if>
-                <if test="version != null" >
+                <if test="version != null">
                     AND ${alias}.version = #{version,jdbcType=INTEGER}
                 </if>
-                <if test="url != null and url !=''" >
+                <if test="url != null and url !=''">
                     AND ${alias}.url = #{url,jdbcType=VARCHAR}
                 </if>
-                <if test="actionName != null and actionName !=''" >
+                <if test="actionName != null and actionName !=''">
                     AND ${alias}.action_name = #{actionName,jdbcType=VARCHAR}
                 </if>
-                <if test="actionCode != null and actionCode !=''" >
+                <if test="actionCode != null and actionCode !=''">
                     AND ${alias}.action_code = #{actionCode,jdbcType=VARCHAR}
                 </if>
-                <if test="status != null and status !=''" >
+                <if test="status != null and status !=''">
                     AND ${alias}.status = #{status,jdbcType=VARCHAR}
                 </if>
-                <if test="remark != null and remark !=''" >
+                <if test="remark != null and remark !=''">
                     AND ${alias}.remark = #{remark,jdbcType=VARCHAR}
                 </if>
-                <if test="menuId != null" >
+                <if test="menuId != null">
                     AND ${alias}.menu_id = #{menuId,jdbcType=BIGINT}
                 </if>
-                <if test="creator != null and creator !=''" >
+                <if test="creator != null and creator !=''">
                     AND ${alias}.creator = #{creator,jdbcType=VARCHAR}
                 </if>
-                <if test="creatorId != null" >
+                <if test="creatorId != null">
                     AND ${alias}.creator_id = #{creatorId,jdbcType=BIGINT}
                 </if>
-                <if test="createdTime != null" >
+                <if test="createdTime != null">
                     AND ${alias}.created_time = #{createdTime,jdbcType=TIMESTAMP}
                 </if>
-                <if test="lastOperator != null and lastOperator !=''" >
+                <if test="lastOperator != null and lastOperator !=''">
                     AND ${alias}.last_operator = #{lastOperator,jdbcType=VARCHAR}
                 </if>
-                <if test="lastOperatorId != null" >
+                <if test="lastOperatorId != null">
                     AND ${alias}.last_operator_id = #{lastOperatorId,jdbcType=BIGINT}
                 </if>
-                <if test="updateTime != null" >
+                <if test="updateTime != null">
                     AND ${alias}.update_time = #{updateTime,jdbcType=TIMESTAMP}
                 </if>
             </where>
         </if>
     </sql>
 
-    <sql id ="Base_OrderBy_Condition">
+    <sql id="Base_OrderBy_Condition">
         <if test="orderBy != null and orderBy !=''">
             ORDER BY ${orderBy}
         </if>
     </sql>
 
-    <sql id ="Base_Set_Condition">
-        <set >
-            <if test="version != null" >
+    <sql id="Base_Set_Condition">
+        <set>
+            <if test="version != null">
                 version = #{version,jdbcType=INTEGER},
             </if>
             <if test="url != null and url !=''">
                 url = #{url,jdbcType=VARCHAR},
             </if>
-            <if test="actionName != null and actionName !=''" >
+            <if test="actionName != null and actionName !=''">
                 action_name = #{actionName,jdbcType=VARCHAR},
             </if>
-            <if test="actionCode != null and actionCode !=''" >
+            <if test="actionCode != null and actionCode !=''">
                 action_code = #{actionCode,jdbcType=VARCHAR},
             </if>
-            <if test="status != null and status !=''" >
+            <if test="status != null and status !=''">
                 status = #{status,jdbcType=VARCHAR},
             </if>
-            <if test="remark != null and remark !=''" >
+            <if test="remark != null and remark !=''">
                 remark = #{remark,jdbcType=VARCHAR},
             </if>
-            <if test="menuId != null" >
+            <if test="menuId != null">
                 menu_id = #{menuId,jdbcType=BIGINT},
             </if>
-            <if test="creator != null and creator !=''" >
+            <if test="creator != null and creator !=''">
                 creator = #{creator,jdbcType=VARCHAR},
             </if>
-            <if test="creatorId != null" >
+            <if test="creatorId != null">
                 creator_id = #{creatorId,jdbcType=BIGINT},
             </if>
-            <if test="createdTime != null" >
+            <if test="createdTime != null">
                 created_time = #{createdTime,jdbcType=TIMESTAMP},
             </if>
-            <if test="lastOperator != null and lastOperator !=''" >
+            <if test="lastOperator != null and lastOperator !=''">
                 last_operator = #{lastOperator,jdbcType=VARCHAR},
             </if>
-            <if test="lastOperatorId != null" >
+            <if test="lastOperatorId != null">
                 last_operator_id = #{lastOperatorId,jdbcType=BIGINT},
             </if>
-            <if test="updateTime != null" >
+            <if test="updateTime != null">
                 update_time = #{updateTime,jdbcType=TIMESTAMP},
             </if>
         </set>
@@ -155,9 +157,9 @@
         </include>
         ,menu.menu_name as menuName
         FROM
-          pc_uac_action action LEFT JOIN pc_uac_menu menu
+        pc_uac_action action LEFT JOIN pc_uac_menu menu
         ON
-          action.menu_id = menu.id
+        action.menu_id = menu.id
         WHERE 1=1
         <if test="status != null and status != ''">
             AND action.status = #{status}
@@ -180,16 +182,18 @@
         select action_id as menu_id from pc_uac_role_action ra where ra.role_id = #{roleId}
     </select>
     <select id="getOwnAuthList" resultType="MenuVo">
-        select m.id as id, m.pid as pid, m.menu_code as menuCode, m.menu_name as menuName from pc_uac_role_menu rm INNER JOIN pc_uac_role r on rm.role_id = r.id
-            INNER JOIN pc_uac_role_user ru on ru.role_id = r.id
-            INNER JOIN pc_uac_user u on ru.user_id = u.id
-            INNER JOIN pc_uac_menu m on rm.menu_id = m.id
+        select m.id as id, m.pid as pid, m.menu_code as menuCode, m.menu_name as menuName from pc_uac_role_menu rm INNER
+        JOIN pc_uac_role r on rm.role_id = r.id
+        INNER JOIN pc_uac_role_user ru on ru.role_id = r.id
+        INNER JOIN pc_uac_user u on ru.user_id = u.id
+        INNER JOIN pc_uac_menu m on rm.menu_id = m.id
         where u.id = #{userId}
         UNION
-        select a.id as id, a.menu_id as pid, a.action_code as menuCode, a.action_name as menuName from pc_uac_role_action ra INNER JOIN pc_uac_role r on ra.role_id = r.id
-            INNER JOIN pc_uac_role_user ru on ru.role_id = r.id
-            INNER JOIN pc_uac_user u on ru.user_id = u.id
-            INNER JOIN pc_uac_action a on ra.action_id = a.id
+        select a.id as id, a.menu_id as pid, a.action_code as menuCode, a.action_name as menuName from
+        pc_uac_role_action ra INNER JOIN pc_uac_role r on ra.role_id = r.id
+        INNER JOIN pc_uac_role_user ru on ru.role_id = r.id
+        INNER JOIN pc_uac_user u on ru.user_id = u.id
+        INNER JOIN pc_uac_action a on ra.action_id = a.id
         where u.id = #{userId}
     </select>
     <select id="getCheckedMenuList" resultType="java.lang.Long">
@@ -197,13 +201,13 @@
     </select>
     <select id="getOwnUacActionListByUserId" resultType="com.supos.cloud.provider.model.domain.UacAction">
         select
-            <include refid="Base_Column_List">
-                <property name="alias" value="a"></property>
-            </include>
+        <include refid="Base_Column_List">
+            <property name="alias" value="a"></property>
+        </include>
         from pc_uac_role_action ra INNER JOIN pc_uac_role r on ra.role_id = r.id
-            INNER JOIN pc_uac_role_user ru on ru.role_id = r.id
-            INNER JOIN pc_uac_user u on ru.user_id = u.id
-            INNER JOIN pc_uac_action a on ra.action_id = a.id
+        INNER JOIN pc_uac_role_user ru on ru.role_id = r.id
+        INNER JOIN pc_uac_user u on ru.user_id = u.id
+        INNER JOIN pc_uac_action a on ra.action_id = a.id
         where u.id = #{userId}
     </select>
     <select id="listActionListByRoleId" resultType="com.supos.cloud.provider.model.domain.UacAction">
@@ -212,11 +216,11 @@
             <property name="alias" value="a"></property>
         </include>
         FROM
-            pc_uac_action a
-            LEFT JOIN pc_uac_role_action ra ON a.id = ra.action_id
-            LEFT JOIN pc_uac_role r ON r.id = ra.role_id
+        pc_uac_action a
+        LEFT JOIN pc_uac_role_action ra ON a.id = ra.action_id
+        LEFT JOIN pc_uac_role r ON r.id = ra.role_id
         WHERE
-            r.id = #{roleId, jdbcType=BIGINT}
+        r.id = #{roleId, jdbcType=BIGINT}
     </select>
     <select id="listActionList" resultType="com.supos.cloud.provider.model.domain.UacAction">
         SELECT

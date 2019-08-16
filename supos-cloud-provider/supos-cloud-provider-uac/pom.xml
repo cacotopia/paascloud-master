@@ -23,9 +23,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
+            <groupId>org.mariadb.jdbc</groupId>
+            <artifactId>mariadb-java-client</artifactId>
         </dependency>
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
@@ -102,7 +101,6 @@
         <dependency>
             <groupId>com.supos.cloud.provider.api</groupId>
             <artifactId>supos-cloud-provider-opc-api</artifactId>
-            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>com.supos.cloud.provider.api</groupId>
@@ -130,4 +128,12 @@
             <artifactId>supos-cloud-security-app</artifactId>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>

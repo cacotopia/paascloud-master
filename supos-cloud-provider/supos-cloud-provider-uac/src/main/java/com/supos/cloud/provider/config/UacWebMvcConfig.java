@@ -25,26 +25,26 @@ import java.util.List;
 @Import(SwaggerConfiguration.class)
 public class UacWebMvcConfig extends WebMvcConfigurerAdapter {
 
-	@Resource
-	private TokenInterceptor vueViewInterceptor;
+    @Resource
+    private TokenInterceptor vueViewInterceptor;
 
-	@Override
-	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/**")
-				.addResourceLocations("classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/");
-	}
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/**")
+                .addResourceLocations("classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/");
+    }
 
-	@Override
-	public void addInterceptors(InterceptorRegistry registry) {
-		super.addInterceptors(registry);
-		registry.addInterceptor(vueViewInterceptor)
-				.addPathPatterns("/**")
-				.excludePathPatterns("/swagger-resources/**", "*.js", "/**/*.js", "*.css", "/**/*.css", "*.html", "/**/*.html", SecurityConstants.DEFAULT_SOCIAL_USER_INFO_URL);
-	}
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        super.addInterceptors(registry);
+        registry.addInterceptor(vueViewInterceptor)
+                .addPathPatterns("/**")
+                .excludePathPatterns("/swagger-resources/**", "*.js", "/**/*.js", "*.css", "/**/*.css", "*.html", "/**/*.html", SecurityConstants.DEFAULT_SOCIAL_USER_INFO_URL);
+    }
 
-	@Override
-	public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-		PcObjectMapper.buidMvcMessageConverter(converters);
-	}
+    @Override
+    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+        PcObjectMapper.buidMvcMessageConverter(converters);
+    }
 
 }

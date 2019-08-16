@@ -15,10 +15,10 @@ import javax.servlet.http.HttpServletResponse;
 @Configuration
 @EnableResourceServer
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
+
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http
-                .headers().frameOptions().disable()
+        http.headers().frameOptions().disable()
                 .and()
                 .csrf().disable()
                 .exceptionHandling()

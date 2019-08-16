@@ -15,14 +15,14 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class RedisInitRunner implements CommandLineRunner {
 
-	/**
-	 * Run.
-	 *
-	 * @param args the args
-	 */
-	@Override
-	public void run(String... args) {
-		log.info(">>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<<");
-	}
+    /**
+     * Run.
+     *
+     * @param args the args
+     */
+    @Override
+    public void run(String... args) {
+        log.info(">>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<<");
+    }
 
 }

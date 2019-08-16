@@ -4,5 +4,16 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
-  <include file="classpath:liquibase/change_log/2017-06-10-init-schema.xml" relativeToChangelogFile="false"/>
+    <include file="change_log/201908150001_uac_action.xml" relativeToChangelogFile="true"/>
+    <include file="change_log/201908150002_uac_group.xml" relativeToChangelogFile="true"/>
+    <include file="change_log/201908150003_uac_group_user.xml" relativeToChangelogFile="true"/>
+    <include file="change_log/201908150004_uac_log.xml" relativeToChangelogFile="true"/>
+    <include file="change_log/201908150005_uac_menu.xml" relativeToChangelogFile="true"/>
+    <include file="change_log/201908150006_uac_role_action.xml" relativeToChangelogFile="true"/>
+    <include file="change_log/201908150006_uac_role_menu.xml" relativeToChangelogFile="true"/>
+    <include file="change_log/201908150007_uac_role.xml" relativeToChangelogFile="true"/>
+    <include file="change_log/201908150008_uac_role_user.xml" relativeToChangelogFile="true"/>
+    <include file="change_log/201908150009_uac_user.xml" relativeToChangelogFile="true"/>
+    <include file="change_log/201908150010_uac_user_menu.xml" relativeToChangelogFile="true"/>
+    <include file="change_log/201908150011_uac_user_token.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>

@@ -17,41 +17,37 @@ import java.util.List;
 @Mapper
 @Component
 public interface OmcShippingMapper extends MyMapper<OmcShipping> {
-	/**
-	 * Delete by shipping id user id int.
-	 *
-	 * @param userId     the user id
-	 * @param shippingId the shipping id
-	 *
-	 * @return the int
-	 */
-	int deleteByShippingIdUserId(@Param("userId") Long userId, @Param("shippingId") Integer shippingId);
+    /**
+     * Delete by shipping id user id int.
+     *
+     * @param userId     the user id
+     * @param shippingId the shipping id
+     * @return the int
+     */
+    int deleteByShippingIdUserId(@Param("userId") Long userId, @Param("shippingId") Integer shippingId);
 
-	/**
-	 * Select by shipping id user id omc shipping.
-	 *
-	 * @param userId     the user id
-	 * @param shippingId the shipping id
-	 *
-	 * @return the omc shipping
-	 */
-	OmcShipping selectByShippingIdUserId(@Param("userId") Long userId, @Param("shippingId") Long shippingId);
+    /**
+     * Select by shipping id user id omc shipping.
+     *
+     * @param userId     the user id
+     * @param shippingId the shipping id
+     * @return the omc shipping
+     */
+    OmcShipping selectByShippingIdUserId(@Param("userId") Long userId, @Param("shippingId") Long shippingId);
 
-	/**
-	 * Select by user id list.
-	 *
-	 * @param userId the user id
-	 *
-	 * @return the list
-	 */
-	List<OmcShipping> selectByUserId(@Param("userId") Long userId);
+    /**
+     * Select by user id list.
+     *
+     * @param userId the user id
+     * @return the list
+     */
+    List<OmcShipping> selectByUserId(@Param("userId") Long userId);
 
-	/**
-	 * Select default address by user id omc shipping.
-	 *
-	 * @param userId the user id
-	 *
-	 * @return the omc shipping
-	 */
-	OmcShipping selectDefaultAddressByUserId(Long userId);
+    /**
+     * Select default address by user id omc shipping.
+     *
+     * @param userId the user id
+     * @return the omc shipping
+     */
+    OmcShipping selectDefaultAddressByUserId(Long userId);
 }

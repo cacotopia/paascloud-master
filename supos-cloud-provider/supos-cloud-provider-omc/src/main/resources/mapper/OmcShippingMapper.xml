@@ -36,7 +36,7 @@
     <delete id="deleteByShippingIdUserId" parameterType="map">
         DELETE FROM pc_omc_shipping
         WHERE id = #{shippingId}
-              AND user_id = #{userId}
+        AND user_id = #{userId}
     </delete>
     <select id="selectByShippingIdUserId" resultMap="BaseResultMap" parameterType="map">
         SELECT
@@ -54,7 +54,7 @@
     <select id="selectDefaultAddressByUserId"
             resultType="com.supos.cloud.provider.model.domain.OmcShipping">
         SELECT
-            <include refid="Base_Column_List"/>
+        <include refid="Base_Column_List"/>
         from pc_omc_shipping
         where id = #{shippingId}
         and default = 1

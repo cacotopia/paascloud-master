@@ -1,0 +1,42 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <property name="autoIncrement" value="true" dbms="mysql"/>
+    <changeSet id="201908150009_uac_user" author="yuhuanlong">
+        <comment>create table pc_uac_user</comment>
+        <createTable tableName="pc_uac_user">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="version" type="INTEGER" defaultValue="" remarks="version"/>
+            <column name="login_name" type="VARCHAR" defaultValue="" remarks="loginName"/>
+            <column name="login_pwd" type="VARCHAR" defaultValue="" remarks="loginPwd"/>
+            <column name="salt" type="VARCHAR" defaultValue="" remarks="salt"/>
+            <column name="user_code" type="VARCHAR" defaultValue="" remarks="userCode"/>
+            <column name="user_name" type="VARCHAR" defaultValue="" remarks="userName"/>
+            <column name="mobile_no" type="VARCHAR" defaultValue="" remarks="mobileNo"/>
+            <column name="email" type="VARCHAR" defaultValue="" remarks="email"/>
+            <column name="status" type="VARCHAR" defaultValue="" remarks="status"/>
+            <column name="user_source" type="VARCHAR" defaultValue="" remarks="userSource"/>
+            <column name="type" type="VARCHAR" defaultValue="" remarks="type"/>
+            <column name="last_login_ip" type="VARCHAR" defaultValue="" remarks="lastLoginIp"/>
+            <column name="last_login_location" type="VARCHAR" defaultValue="" remarks="lastLoginLocation"/>
+            <column name="remark" type="VARCHAR" defaultValue="" remarks="remark"/>
+            <column name="last_login_time" type="TIMESTAMP" defaultValue="" remarks="lastLoginTime"/>
+            <column name="is_changed_pwd" type="SMALLINT" defaultValue="" remarks="isChangedPwd"/>
+            <column name="pwd_error_count" type="SMALLINT" defaultValue="" remarks="pwdErrorCount"/>
+            <column name="pwd_error_time" type="TIMESTAMP" defaultValue="" remarks="pwdErrorTime"/>
+            <column name="creator" type="VARCHAR" defaultValue="" remarks="creator"/>
+            <column name="creator_id" type="BIGINT" defaultValue="" remarks="creatorId"/>
+            <column name="created_time" type="TIMESTAMP" defaultValue="" remarks="createdTime"/>
+            <column name="last_operator" type="VARCHAR" defaultValue="" remarks="lastOperator"/>
+            <column name="last_operator_id" type="BIGINT" defaultValue="" remarks="lastOperatorId"/>
+            <column name="update_time" type="TIMESTAMP" defaultValue="" remarks="updateTime"/>
+        </createTable>
+        <modifySql dbms="mysql">
+            <append value="ENGINE=INNODB DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_general_ci"/>
+        </modifySql>
+    </changeSet>
+</databaseChangeLog>

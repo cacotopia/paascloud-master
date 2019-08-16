@@ -2,7 +2,7 @@ FROM openjdk:8-jdk-alpine
 MAINTAINER cacotopia <cacotopia@126.com>
 VOLUME /tmp
 ADD supos-cloud-eureka.jar /app/supos-cloud-eureka.jar
-RUN sh -c 'touch /app/paascloud-eureka.jar'
+RUN sh -c 'touch /app/supos-cloud-eureka.jar'
 ENV JAVA_OPTS=""
 WORKDIR /app/
 EXPOSE 8761

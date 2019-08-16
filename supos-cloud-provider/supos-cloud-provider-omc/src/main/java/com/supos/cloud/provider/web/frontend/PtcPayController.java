@@ -1,12 +1,13 @@
 package com.supos.cloud.provider.web.frontend;
 
 //import com.alipay.demo.trade.config.Configs;
+
 import com.google.common.collect.Maps;
 import com.supos.cloud.base.dto.LoginAuthDto;
 import com.supos.cloud.core.support.BaseController;
 import com.supos.cloud.provider.model.constant.PtcApiConstant;
 import com.supos.cloud.provider.service.PtcAlipayService;
-        import com.supos.cloud.wrapper.Wrapper;
+import com.supos.cloud.wrapper.Wrapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.MediaType;
@@ -28,6 +29,7 @@ import java.util.Map;
 @RequestMapping(value = "/pay")
 @Api(value = "WEB - PtcPayController", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class PtcPayController extends BaseController {
+    
     @Resource
     private PtcAlipayService ptcAlipayService;
 

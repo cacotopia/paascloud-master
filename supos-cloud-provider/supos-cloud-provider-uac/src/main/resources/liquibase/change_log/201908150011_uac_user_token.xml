@@ -1,0 +1,44 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <property name="autoIncrement" value="true" dbms="mysql"/>
+    <changeSet id="201908150006_uac_user_token" author="yuhuanlong">
+        <comment>create table pc_uac_user_token</comment>
+        <createTable tableName="pc_uac_user_token">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="user_id" type="BIGINT" defaultValue="" remarks=""/>
+            <column name="menu_id" type="BIGINT" defaultValue="" remarks=""/>
+            <column name="number" type="INTEGER" defaultValue="" remarks=""/>
+            <column name="pid" type="BIGINT" defaultValue="" remarks="pid"/>
+            <column name="login_name" type="VARCHAR" defaultValue="" remarks="loginName"/>
+            <column name="user_name" type="VARCHAR" defaultValue="" remarks="userName"/>
+            <column name="user_id" type="BIGINT" defaultValue="" remarks="userId"/>
+            <column name="os" defaultValue="" remarks="os" type="VARCHAR"/>
+            <column name="browser" defaultValue="" remarks="browser" type="VARCHAR"/>
+            <column name="login_ip" type="VARCHAR" defaultValue="" remarks="loginIp"/>
+            <column name="login_location" type="VARCHAR" defaultValue="" remarks="loginLocation"/>
+            <column name="access_token" type="VARCHAR" defaultValue="" remarks="accessToken"/>
+            <column name="refresh_token" type="VARCHAR" defaultValue="" remarks="refreshToken"/>
+            <column name="access_token_validity" type="INTEGER" defaultValue="" remarks="accessTokenValidity"/>
+            <column name="refresh_token_validity" type="INTEGER" defaultValue="" remarks="refreshTokenValidity"/>
+            <column name="status" type="INTEGER" defaultValue="" remarks="status"/>
+            <column name="login_time" type="TIMESTAMP" defaultValue="" remarks="loginTime"/>
+            <column name="group_id" defaultValue="" remarks="groupId" type="BIGINT"/>
+            <column name="group_name" defaultValue="" remarks="groupName" type="VARCHAR"/>
+            <column name="creator" type="VARCHAR" defaultValue="" remarks="creator"/>
+            <column name="creator_id" type="BIGINT" defaultValue="" remarks="creatorId"/>
+            <column name="created_time" type="TIMESTAMP" defaultValue="" remarks="createdTime"/>
+            <column name="last_operator" type="VARCHAR" defaultValue="" remarks="lastOperator"/>
+            <column name="last_operator_id" type="BIGINT" defaultValue="" remarks="lastOperatorId"/>
+            <column name="update_time" type="TIMESTAMP" defaultValue="" remarks="updateTime"/>
+            <column name="version" type="INTEGER" defaultValue="" remarks="version"/>
+        </createTable>
+        <modifySql dbms="mysql">
+            <append value="ENGINE=INNODB DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_general_ci"/>
+        </modifySql>
+    </changeSet>
+</databaseChangeLog>

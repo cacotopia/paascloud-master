@@ -1,0 +1,25 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <property name="autoIncrement" value="true" dbms="mysql"/>
+    <changeSet id="201908150001_mdc_address" author="yuhuanlong">
+        <comment>create table pc_mdc_address</comment>
+        <createTable tableName="pc_mdc_address">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" defaultValue="" remarks="name" type="VARCHAR"/>
+            <column name="pid" defaultValue="" remarks="pid" type="BIGINT"/>
+            <column name="city_code" defaultValue="" remarks="cityCode" type="VARCHAR"/>
+            <column name="level" defaultValue="" remarks="level" type="INTEGER"/>
+            <column name="ad_code" defaultValue="" remarks="adCode" type="VARCHAR"/>
+            <column name="polyline" defaultValue="" remarks="polyline" type="VARCHAR"/>
+            <column name="center" defaultValue="" remarks="center" type="VARCHAR"/>
+        </createTable>
+        <modifySql dbms="mysql">
+            <append value="ENGINE=INNODB DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_general_ci"/>
+        </modifySql>
+    </changeSet>
+</databaseChangeLog>

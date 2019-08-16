@@ -3,7 +3,6 @@
 <mapper namespace="com.supos.cloud.provider.mapper.UacRoleMapper">
     <resultMap id="BaseResultMap" type="com.supos.cloud.provider.model.domain.UacRole">
         <id column="id" jdbcType="BIGINT" property="id"/>
-        <result column="version" jdbcType="INTEGER" property="version"/>
         <result column="role_code" jdbcType="VARCHAR" property="roleCode"/>
         <result column="role_name" jdbcType="VARCHAR" property="roleName"/>
         <result column="status" jdbcType="VARCHAR" property="status"/>
@@ -14,10 +13,10 @@
         <result column="last_operator" jdbcType="VARCHAR" property="lastOperator"/>
         <result column="last_operator_id" jdbcType="BIGINT" property="lastOperatorId"/>
         <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="version" jdbcType="INTEGER" property="version"/>
     </resultMap>
     <sql id="Base_Column_List">
         r.id AS id,
-        r.version as version,
         r.role_code as roleCode,
         r.role_name as roleName,
         r.status as status,
@@ -27,14 +26,12 @@
         r.created_time as createdTime,
         r.last_operator as lastOperator,
         r.last_operator_id as lastOperatorId,
-        r.update_time as updateTime
+        r.update_time as updateTime,
+        r.version as version,
     </sql>
     <sql id="Base_Where_Condition">
         <if test="id != null and id != ''">
             AND id = #{id,jdbcType=BIGINT}
-        </if>
-        <if test="version != null ">
-            AND version = #{version,jdbcType=INTEGER}
         </if>
         <if test="roleCode != null and roleCode != ''">
             AND role_code = #{roleCode,jdbcType=VARCHAR}
@@ -66,13 +63,16 @@
         <if test="updateTime != null">
             AND update_time = #{updateTime,jdbcType=TIMESTAMP}
         </if>
+        <if test="version != null ">
+            AND version = #{version,jdbcType=INTEGER}
+        </if>
     </sql>
-    <sql id ="Base_OrderBy_Condition">
+    <sql id="Base_OrderBy_Condition">
         <if test="orderBy != null and orderBy !=''">
             ORDER BY ${orderBy}
         </if>
     </sql>
-    <sql id ="Base_Set_Condition">
+    <sql id="Base_Set_Condition">
         <set>
             <if test="version != null">
                 version = version + 1,
@@ -141,49 +141,51 @@
     </select>
     <select id="selectAllRoleInfoByUserId" resultMap="BaseResultMap">
         SELECT
-            r.id,
-            r.role_name,
-            r.role_code,
-            r.remark,
-            r.status
+        r.id,
+        r.role_name,
+        r.role_code,
+        r.remark,
+        r.status
         FROM
-            pc_uac_role r
-            LEFT JOIN pc_uac_role_user ru ON ru.role_id = r.id
+        pc_uac_role r
+        LEFT JOIN pc_uac_role_user ru ON ru.role_id = r.id
         WHERE ru.user_id = #{userId}
     </select>
     <select id="selectRoleList" resultMap="BaseResultMap" parameterType="uacRole">
         SELECT
-            <include refid="Base_Column_List"/>
+        <include refid="Base_Column_List"/>
         FROM
-            pc_uac_role r
+        pc_uac_role r
         WHERE
-            1=1 <include refid="Base_Where_Condition"/>
+        1=1
+        <include refid="Base_Where_Condition"/>
         <if test="orderBy != null and orderBy !=''">
             ORDER BY ${orderBy}
         </if>
     </select>
-    <select id="selectAllNeedBindUser" parameterType="map" resultType="com.supos.cloud.provider.model.dto.role.BindUserDto">
+    <select id="selectAllNeedBindUser" parameterType="map"
+            resultType="com.supos.cloud.provider.model.dto.role.BindUserDto">
         SELECT
-            a.id as userId,
-            a.mobile_no as mobileNo,
-            a.user_name as userName,
-            (a.id = b.id) OR (a.id = #{currentUserId}) AS disabled
+        a.id as userId,
+        a.mobile_no as mobileNo,
+        a.user_name as userName,
+        (a.id = b.id) OR (a.id = #{currentUserId}) AS disabled
         FROM
-            (
-                SELECT
-                    u.id,
-                    u.mobile_no,
-                    u.user_name
-                FROM pc_uac_user u) a
-            LEFT JOIN
-            (
-                SELECT
-                    u.id,
-                    u.mobile_no,
-                    u.user_name
-                FROM pc_uac_user u INNER JOIN pc_uac_role_user ru ON u.id = ru.user_id
-                    INNER JOIN pc_uac_role role ON role.id = ru.role_id
-                WHERE role.id = #{superManagerRoleId}) b
+        (
+        SELECT
+        u.id,
+        u.mobile_no,
+        u.user_name
+        FROM pc_uac_user u) a
+        LEFT JOIN
+        (
+        SELECT
+        u.id,
+        u.mobile_no,
+        u.user_name
+        FROM pc_uac_user u INNER JOIN pc_uac_role_user ru ON u.id = ru.user_id
+        INNER JOIN pc_uac_role role ON role.id = ru.role_id
+        WHERE role.id = #{superManagerRoleId}) b
         ON a.id = b.id
     </select>
     <delete id="batchDeleteByIdList" parameterType="list">

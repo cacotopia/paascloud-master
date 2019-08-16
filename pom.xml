@@ -91,6 +91,7 @@
         <elastic-job.version>2.1.5</elastic-job.version>
         <curator.version>2.10.0</curator.version>
         <mysql.version>5.1.39</mysql.version>
+        <mariadb.version>2.3.0</mariadb.version>
         <guava.version>17.0</guava.version>
         <lombok.version>1.18.8</lombok.version>
         <spring-boot-admin.version>2.0.6</spring-boot-admin.version>
@@ -121,6 +122,7 @@
         <zipkin.version>2.12.9</zipkin.version>
         <jedis.version>3.1.0</jedis.version>
         <redisson.version>3.11.2</redisson.version>
+        <sentinel.version>1.6.3</sentinel.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-source-plugin.version>3.1.0</maven-source-plugin.version>
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
@@ -316,6 +318,11 @@
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mariadb.jdbc</groupId>
+                <artifactId>mariadb-java-client</artifactId>
+                <version>${mariadb.version}</version>
             </dependency>
             <!--mybatis-->
             <dependency>
@@ -719,6 +726,12 @@
                 <groupId>com.google.zxing</groupId>
                 <artifactId>core</artifactId>
                 <version>${zxing.version}</version>
+            </dependency>
+            <!-- sentinel -->
+            <dependency>
+                <groupId>com.alibaba.csp</groupId>
+                <artifactId>sentinel-datasource-apollo</artifactId>
+                <version>${sentinel.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

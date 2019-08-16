@@ -1,0 +1,47 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <property name="autoIncrement" value="true" dbms="mysql"/>
+    <changeSet id="201908150004_uac_log" author="yuhuanlong">
+        <comment>init schema</comment>
+        <createTable tableName="user">
+            <column name="id" type="BIGINT" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="group_id" defaultValue="" remarks="groupId" type="BIGINT"/>
+            <column name="group_name" defaultValue="" remarks="groupName" type="VARCHAR"/>
+            <column name="log_type" defaultValue="" remarks="logType" type="VARCHAR"/>
+            <column name="log_name" defaultValue="" remarks="logName" type="VARCHAR"/>
+            <column name="action_id" defaultValue="" remarks="actionId" type="BIGINT"/>
+            <column name="action_code" defaultValue="" remarks="actionCode" type="VARCHAR"/>
+            <column name="action_name" defaultValue="" remarks="actionName" type="VARCHAR"/>
+            <column name="os" defaultValue="" remarks="os" type="VARCHAR"/>
+            <column name="browser" defaultValue="" remarks="browser" type="VARCHAR"/>
+            <column name="ip" defaultValue="" remarks="ip" type="VARCHAR"/>
+            <column name="location" defaultValue="" remarks="location" type="VARCHAR"/>
+            <column name="mac" defaultValue="" remarks="mac" type="VARCHAR"/>
+            <column name="description" defaultValue="" remarks="description" type="VARCHAR"/>
+            <column name="request_data" defaultValue="" remarks="requestData" type="VARCHAR"/>
+            <column name="request_url" defaultValue="" remarks="requestUrl" type="VARCHAR"/>
+            <column name="response_data" defaultValue="" remarks="responseData" type="VARCHAR"/>
+            <column name="class_name" defaultValue="" remarks="className" type="VARCHAR"/>
+            <column name="method_name" defaultValue="" remarks="methodName" type="VARCHAR"/>
+            <column name="start_time" defaultValue="" remarks="startTime" type="TIMESTAMP"/>
+            <column name="end_time" defaultValue="" remarks="endTime" type="TIMESTAMP"/>
+            <column name="execute_time" defaultValue="" remarks="executeTime" type="BIGINT"/>
+            <column name="group_id" defaultValue="" remarks="groupId" type="BIGINT"/>
+            <column name="group_name" defaultValue="" remarks="groupName" type="VARCHAR"/>
+            <column name="creator" defaultValue="" remarks="creator" type="VARCHAR"/>
+            <column name="creator_id" defaultValue="" remarks="creatorId" type="BIGINT"/>
+            <column name="created_time" defaultValue="" remarks="createdTime" type="TIMESTAMP"/>
+            <column name="last_operator" defaultValue="" remarks="lastOperator" type="VARCHAR"/>
+            <column name="last_operator_id" defaultValue="" remarks="lastOperatorId" type="BIGINT"/>
+            <column name="update_time" defaultValue="" remarks="updateTime" type="TIMESTAMP"/>
+        </createTable>
+        <modifySql dbms="mysql">
+            <append value="ENGINE=INNODB DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_general_ci"/>
+        </modifySql>
+    </changeSet>
+</databaseChangeLog>

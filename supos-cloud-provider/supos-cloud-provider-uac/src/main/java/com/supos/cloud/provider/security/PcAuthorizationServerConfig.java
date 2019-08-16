@@ -30,75 +30,72 @@ import java.util.List;
 @EnableAuthorizationServer
 public class PcAuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
 
-	@Autowired
-	private TokenStore tokenStore;
-	@Autowired
-	private AuthenticationManager authenticationManager;
-	@Resource
-	private UserDetailsService userDetailsService;
-	@Resource
-	private RestClientDetailsServiceImpl restClientDetailsService;
-	@Autowired(required = false)
-	private JwtAccessTokenConverter jwtAccessTokenConverter;
+    @Autowired
+    private TokenStore tokenStore;
+    @Autowired
+    private AuthenticationManager authenticationManager;
+    @Resource
+    private UserDetailsService userDetailsService;
+    @Resource
+    private RestClientDetailsServiceImpl restClientDetailsService;
+    @Autowired(required = false)
+    private JwtAccessTokenConverter jwtAccessTokenConverter;
 
-	@Autowired(required = false)
-	private TokenEnhancer jwtTokenEnhancer;
+    @Autowired(required = false)
+    private TokenEnhancer jwtTokenEnhancer;
 
-	/**
-	 * Configure.
-	 *
-	 * @param security the security
-	 *
-	 * @throws Exception the exception
-	 */
-	@Override
-	public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-		security.tokenKeyAccess("permitAll()");
-		security.allowFormAuthenticationForClients();
-	}
+    /**
+     * Configure.
+     *
+     * @param security the security
+     * @throws Exception the exception
+     */
+    @Override
+    public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+        security.tokenKeyAccess("permitAll()");
+        security.allowFormAuthenticationForClients();
+    }
 
-	/**
-	 * Configure.
-	 *
-	 * @param clients the clients
-	 *
-	 * @throws Exception the exception
-	 */
-	@Override
-	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-		clients.withClientDetails(restClientDetailsService);
-	}
+    /**
+     * Configure.
+     *
+     * @param clients the clients
+     * @throws Exception the exception
+     */
+    @Override
+    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+        clients.withClientDetails(restClientDetailsService);
+    }
 
-	/**
-	 * Configure.
-	 *
-	 * @param endpoints the endpoints
-	 *
-	 * @throws Exception the exception
-	 */
-	@Override
-	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-		endpoints.tokenStore(tokenStore)
-				.authenticationManager(authenticationManager)
-				.userDetailsService(userDetailsService);
+    /**
+     * Configure.
+     *
+     * @param endpoints the endpoints
+     * @throws Exception the exception
+     */
+    @Override
+    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
+        endpoints.tokenStore(tokenStore)
+                .authenticationManager(authenticationManager)
+                .userDetailsService(userDetailsService);
 
-		if (jwtAccessTokenConverter != null && jwtTokenEnhancer != null) {
-			TokenEnhancerChain enhancerChain = new TokenEnhancerChain();
-			List<TokenEnhancer> enhancers = new ArrayList<>();
-			enhancers.add(jwtTokenEnhancer);
-			enhancers.add(jwtAccessTokenConverter);
-			enhancerChain.setTokenEnhancers(enhancers);
-			endpoints.tokenEnhancer(enhancerChain).accessTokenConverter(jwtAccessTokenConverter);
-		}
-	}
+        if (jwtAccessTokenConverter != null && jwtTokenEnhancer != null) {
+            TokenEnhancerChain enhancerChain = new TokenEnhancerChain();
+            List<TokenEnhancer> enhancers = new ArrayList<>();
+            enhancers.add(jwtTokenEnhancer);
+            enhancers.add(jwtAccessTokenConverter);
+            enhancerChain.setTokenEnhancers(enhancers);
+            endpoints.tokenEnhancer(enhancerChain).accessTokenConverter(jwtAccessTokenConverter);
+        }
+    }
 
-	/**
-	 * 退出时的处理策略配置
-	 *
-	 * @return logout success handler
-	 */
-	@Bean
-	public LogoutSuccessHandler logoutSuccessHandler() {
-		return new PcLogoutSuccessHandler();
-	}
+    /**
+     * 退出时的处理策略配置
+     *
+     * @return logout success handler
+     */
+    @Bean
+    public LogoutSuccessHandler logoutSuccessHandler() {
+        return new PcLogoutSuccessHandler();
+    }
 }

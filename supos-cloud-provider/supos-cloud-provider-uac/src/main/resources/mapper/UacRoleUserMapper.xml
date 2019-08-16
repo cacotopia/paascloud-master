@@ -10,31 +10,31 @@
     </sql>
     <sql id="Base_Where_Condition">
     </sql>
-    <sql id ="Base_Set_Condition">
+    <sql id="Base_Set_Condition">
     </sql>
 
     <delete id="deleteExcludeSuperMng" parameterType="map">
         DELETE
         FROM
-            pc_uac_role_user
+        pc_uac_role_user
         WHERE
-            user_id IN (SELECT temp.user_id
-                        FROM (
-                                 SELECT ru.user_id
-                                 FROM
-                                     `pc_uac_role_user` ru
-                                     LEFT JOIN pc_uac_user u ON ru.user_id = u.id
-                                 WHERE
-                                     ru.role_id = #{currentRoleId}
-                                     AND ru.user_id NOT IN (
-                                         SELECT ru.user_id
-                                         FROM
-                                             `pc_uac_role_user` ru
-                                             LEFT JOIN pc_uac_user u ON ru.user_id = u.id
-                                         WHERE
-                                             ru.role_id = #{superRoleId}
-                                     )) temp
-            )
+        user_id IN (SELECT temp.user_id
+        FROM (
+        SELECT ru.user_id
+        FROM
+        `pc_uac_role_user` ru
+        LEFT JOIN pc_uac_user u ON ru.user_id = u.id
+        WHERE
+        ru.role_id = #{currentRoleId}
+        AND ru.user_id NOT IN (
+        SELECT ru.user_id
+        FROM
+        `pc_uac_role_user` ru
+        LEFT JOIN pc_uac_user u ON ru.user_id = u.id
+        WHERE
+        ru.role_id = #{superRoleId}
+        )) temp
+        )
     </delete>
     <delete id="deleteByRoleId">
         delete from pc_uac_role_user
@@ -58,12 +58,12 @@
     </select>
     <select id="listSuperUser" parameterType="long" resultType="java.lang.Long">
         SELECT
-            ru.user_id
+        ru.user_id
         FROM
-            `pc_uac_role_user` ru
-            LEFT JOIN pc_uac_user u ON ru.user_id = u.id
+        `pc_uac_role_user` ru
+        LEFT JOIN pc_uac_user u ON ru.user_id = u.id
         WHERE
-            ru.role_id = #{roleId}
+        ru.role_id = #{roleId}
     </select>
     <select id="listByRoleIdList" resultType="uacRoleUser">
         SELECT

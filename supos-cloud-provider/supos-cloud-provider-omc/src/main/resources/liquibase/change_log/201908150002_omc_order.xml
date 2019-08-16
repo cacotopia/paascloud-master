@@ -1,0 +1,34 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <property name="autoIncrement" value="true" dbms="mysql"/>
+    <changeSet id="201908150002_omc_order" author="yuhuanlong">
+        <comment>create table pc_omc_order</comment>
+        <createTable tableName="pc_omc_order">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="version" defaultValue="" remarks="version" type="INTEGER"/>
+            <column name="detail_no" defaultValue="" remarks="detailNo" type="VARCHAR"/>
+            <column name="user_id" defaultValue="" remarks="userId" type="BIGINT"/>
+            <column name="order_no" defaultValue="" remarks="orderNo" type="VARCHAR"/>
+            <column name="product_id" defaultValue="" remarks="productId" type="BIGINT"/>
+            <column name="product_name" defaultValue="" remarks="productName" type="VARCHAR"/>
+            <column name="product_image" defaultValue="" remarks="productImage" type="VARCHAR"/>
+            <column name="current_unit_price" defaultValue="" remarks="currentUnitPrice" type="DECIMAL"/>
+            <column name="quantity" defaultValue="" remarks="quantity" type="INTEGER"/>
+            <column name="total_price" defaultValue="" remarks="totalPrice" type="DECIMAL"/>
+            <column name="creator" defaultValue="" remarks="creator" type="VARCHAR"/>
+            <column name="creator_id" defaultValue="" remarks="creatorId" type="BIGINT"/>
+            <column name="created_time" defaultValue="" remarks="createdTime" type="TIMESTAMP"/>
+            <column name="last_operator" defaultValue="" remarks="lastOperator" type="VARCHAR"/>
+            <column name="last_operator_id" defaultValue="" remarks="lastOperatorId" type="BIGINT"/>
+            <column name="update_time" defaultValue="" remarks="updateTime" type="TIMESTAMP"/>
+        </createTable>
+        <modifySql dbms="mysql">
+            <append value="ENGINE=INNODB DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_general_ci"/>
+        </modifySql>
+    </changeSet>
+</databaseChangeLog>

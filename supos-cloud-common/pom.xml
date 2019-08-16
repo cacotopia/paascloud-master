@@ -9,7 +9,7 @@
         <groupId>com.supos.cloud</groupId>
         <artifactId>supos-cloud-parent</artifactId>
         <version>1.0.0</version>
-        <relativePath>..</relativePath>
+        <relativePath>../</relativePath>
     </parent>
 
     <groupId>com.supos.cloud.common</groupId>

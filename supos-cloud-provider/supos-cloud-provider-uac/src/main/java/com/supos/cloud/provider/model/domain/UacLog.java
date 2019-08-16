@@ -141,8 +141,8 @@ public class UacLog extends BaseEntity {
 	/**
 	 * 耗时,秒
 	 */
-	@Column(name = "excute_time")
-	private Long excuteTime;
+	@Column(name = "execute_time")
+	private Long executeTime;
 	/**
 	 * 登录位置
 	 */

@@ -3,7 +3,6 @@
 <mapper namespace="com.supos.cloud.provider.mapper.UacMenuMapper">
     <resultMap id="BaseResultMap" type="com.supos.cloud.provider.model.domain.UacMenu">
         <id column="id" jdbcType="BIGINT" property="id"/>
-        <result column="version" jdbcType="INTEGER" property="version"/>
         <result column="menu_code" jdbcType="VARCHAR" property="menuCode"/>
         <result column="menu_name" jdbcType="VARCHAR" property="menuName"/>
         <result column="status" jdbcType="VARCHAR" property="status"/>
@@ -21,8 +20,9 @@
         <result column="last_operator" jdbcType="VARCHAR" property="lastOperator"/>
         <result column="last_operator_id" jdbcType="BIGINT" property="lastOperatorId"/>
         <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="version" jdbcType="INTEGER" property="version"/>
     </resultMap>
-    <sql id ="Base_OrderBy_Condition">
+    <sql id="Base_OrderBy_Condition">
         <if test="orderBy != null and orderBy !=''">
             ORDER BY ${orderBy}
         </if>
@@ -108,7 +108,7 @@
             AND update_time = #{updateTime,jdbcType=TIMESTAMP}
         </if>
     </sql>
-    <sql id ="Base_Set_Condition">
+    <sql id="Base_Set_Condition">
         <set>
             <if test="version != null">
                 version = version + 1,
@@ -170,10 +170,10 @@
         SELECT DISTINCT
         m.url as url
         FROM
-        pc_uac_role r,  pc_uac_role_menu rm, pc_uac_menu m, pc_uac_user u , pc_uac_role_user ur
+        pc_uac_role r, pc_uac_role_menu rm, pc_uac_menu m, pc_uac_user u , pc_uac_role_user ur
         WHERE
         1=1
-        and	r.id = rm.role_id
+        and r.id = rm.role_id
         and rm.menu_id = m.id
         and u.id = ur.user_id
         and ur.role_id = r.id
@@ -189,67 +189,68 @@
         m.id as id,
         m.icon as icon
         FROM
-        pc_uac_role r,  pc_uac_role_menu rm, pc_uac_menu m, pc_uac_user u , pc_uac_role_user ur
+        pc_uac_role r, pc_uac_role_menu rm, pc_uac_menu m, pc_uac_user u , pc_uac_role_user ur
         WHERE
         1=1
-        and	r.id = rm.role_id
+        and r.id = rm.role_id
         and rm.menu_id = m.id
         and u.id = ur.user_id
         and ur.role_id = r.id
         and u.id = #{userId,jdbcType=BIGINT}
         and m.status='ENABLE'
-        order by  m.level asc, m.number asc
+        order by m.level asc, m.number asc
     </select>
     <select id="selectMenuList" resultMap="BaseResultMap" parameterType="uacUser">
         SELECT
-            <include refid="Base_Column_List" />
+        <include refid="Base_Column_List"/>
         From
-            pc_uac_menu m
+        pc_uac_menu m
         WHERE
-            1 =1 <include refid="Base_Where_Condition" />
+        1 =1
+        <include refid="Base_Where_Condition"/>
         <if test="orderBy != null and orderBy != ''">
             ORDER BY ${orderBy}
         </if>
     </select>
     <update id="updateMenu" parameterType="uacMenu">
         update pc_uac_menu
-          <include refid="Base_Set_Condition"/>
+        <include refid="Base_Set_Condition"/>
         where 1 =1
-          <include refid="Base_Where_Condition"/>
+        <include refid="Base_Where_Condition"/>
     </update>
     <select id="selectMenuChildCountByPid" resultType="java.lang.Integer">
         SELECT
-            count(1)
+        count(1)
         FROM
-          pc_uac_menu mp
+        pc_uac_menu mp
         INNER JOIN
-            pc_uac_menu mc ON mp.id = mc.pid
+        pc_uac_menu mc ON mp.id = mc.pid
         where
-             mp.id=#{pid,jdbcType=BIGINT}
+        mp.id=#{pid,jdbcType=BIGINT}
     </select>
     <select id="selectByUrl" resultMap="BaseResultMap">
         SELECT
-            <include refid="Base_Column_List"/>
+        <include refid="Base_Column_List"/>
         FROM
-            pc_uac_menu m
+        pc_uac_menu m
         WHERE
-            m.url = #{url, jdbcType=VARCHAR}
+        m.url = #{url, jdbcType=VARCHAR}
     </select>
     <select id="listMenuListByRoleId" resultType="com.supos.cloud.provider.model.domain.UacMenu">
         SELECT
-          <include refid="Base_Column_List"/>
+        <include refid="Base_Column_List"/>
         FROM pc_uac_menu m LEFT JOIN pc_uac_role_menu rm on m.id = rm.menu_id
         LEFT JOIN pc_uac_role r on r.id = rm.role_id
         where r.id = #{roleId, jdbcType=BIGINT}
     </select>
-  <select id="listMenu" resultType="com.supos.cloud.provider.model.domain.UacMenu">
-    SELECT
-    <include refid="Base_Column_List" />
-    From
-    pc_uac_menu m
-    WHERE m.id IN
-    <foreach collection="menuIdList" item="item" index="index" open="(" close=")" separator=",">
-      #{item}
-    </foreach>
-  </select>
+    <select id="listMenu" resultType="com.supos.cloud.provider.model.domain.UacMenu">
+        SELECT
+        <include refid="Base_Column_List"/>
+        From
+        pc_uac_menu m
+        WHERE m.id IN
+        <foreach collection="menuIdList" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </select>
 </mapper>

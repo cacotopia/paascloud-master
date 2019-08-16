@@ -1,0 +1,39 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <property name="autoIncrement" value="true" dbms="mysql"/>
+    <changeSet id="201908150004_omc_shipping" author="yuhuanlong">
+        <comment>create table pc_omc_shipping</comment>
+        <createTable tableName="pc_omc_shipping">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="version" defaultValue="" remarks="version" type="INTEGER"/>
+            <column name="receiver_name" defaultValue="" remarks="receiverName" type="VARCHAR"/>
+            <column name="receiver_phone_no" defaultValue="" remarks="receiverPhoneNo" type="VARCHAR"/>
+            <column name="receiver_mobile_no" defaultValue="" remarks="receiverMobileNo" type="VARCHAR"/>
+            <column name="province_id" defaultValue="" remarks="provinceId" type="BIGINT"/>
+            <column name="province_name" defaultValue="" remarks="provinceName" type="VARCHAR"/>
+            <column name="city_id" defaultValue="" remarks="cityId" type="BIGINT"/>
+            <column name="city_name" defaultValue="" remarks="cityName" type="VARCHAR"/>
+            <column name="district_name" defaultValue="" remarks="districtName" type="VARCHAR"/>
+            <column name="district_id" defaultValue="" remarks="districtId" type="BIGINT"/>
+            <column name="street_id" defaultValue="" remarks="streetId" type="BIGINT"/>
+            <column name="street_name" defaultValue="" remarks="streetName" type="VARCHAR"/>
+            <column name="detail_address" defaultValue="" remarks="detailAddress" type="VARCHAR"/>
+            <column name="receiver_zip_code" defaultValue="" remarks="receiverZipCode" type="VARCHAR"/>
+            <column name="default_address" defaultValue="" remarks="defaultAddress" type="INTEGER"/>
+            <column name="creator" defaultValue="" remarks="creator" type="VARCHAR"/>
+            <column name="creator_id" defaultValue="" remarks="creatorId" type="BIGINT"/>
+            <column name="created_time" defaultValue="" remarks="createdTime" type="TIMESTAMP"/>
+            <column name="last_operator" defaultValue="" remarks="lastOperator" type="VARCHAR"/>
+            <column name="last_operator_id" defaultValue="" remarks="lastOperatorId" type="BIGINT"/>
+            <column name="update_time" defaultValue="" remarks="updateTime" type="TIMESTAMP"/>
+        </createTable>
+        <modifySql dbms="mysql">
+            <append value="ENGINE=INNODB DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_general_ci"/>
+        </modifySql>
+    </changeSet>
+</databaseChangeLog>

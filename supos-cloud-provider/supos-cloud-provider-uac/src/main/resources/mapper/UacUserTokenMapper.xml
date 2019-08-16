@@ -54,15 +54,16 @@
             and user_name LIKE concat(#{userName}, '%')
         </if>
     </select>
-  <select id="listOffLineTokenId" resultType="java.lang.Long">
-    SELECT id FROM pc_uac_user_token WHERE TIMESTAMPDIFF(SECOND, created_time, NOW()) > access_token_validity AND status in (0,10);
-  </select>
+    <select id="listOffLineTokenId" resultType="java.lang.Long">
+        SELECT id FROM pc_uac_user_token WHERE TIMESTAMPDIFF(SECOND, created_time, NOW()) > access_token_validity AND
+        status in (0,10);
+    </select>
 
-  <update id="batchUpdateTokenOffLine">
-    UPDATE pc_uac_user_token SET `status` = #{status}
-    WHERE id IN
-    <foreach collection="tokenIdList" item="item" index="index" open="(" close=")" separator=",">
-      #{item}
-    </foreach>
-  </update>
+    <update id="batchUpdateTokenOffLine">
+        UPDATE pc_uac_user_token SET `status` = #{status}
+        WHERE id IN
+        <foreach collection="tokenIdList" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </update>
 </mapper>

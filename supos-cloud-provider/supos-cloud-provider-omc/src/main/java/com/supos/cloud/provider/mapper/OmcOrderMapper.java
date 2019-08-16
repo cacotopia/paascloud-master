@@ -18,47 +18,43 @@ import java.util.List;
 @Mapper
 @Component
 public interface OmcOrderMapper extends MyMapper<OmcOrder> {
-	/**
-	 * Select by user id and order no omc order.
-	 *
-	 * @param userId  the user id
-	 * @param orderNo the order no
-	 *
-	 * @return the omc order
-	 */
-	OmcOrder selectByUserIdAndOrderNo(@Param("userId") Long userId, @Param("orderNo") String orderNo);
+    /**
+     * Select by user id and order no omc order.
+     *
+     * @param userId  the user id
+     * @param orderNo the order no
+     * @return the omc order
+     */
+    OmcOrder selectByUserIdAndOrderNo(@Param("userId") Long userId, @Param("orderNo") String orderNo);
 
-	/**
-	 * Select by order no omc order.
-	 *
-	 * @param orderNo the order no
-	 *
-	 * @return the omc order
-	 */
-	OmcOrder selectByOrderNo(String orderNo);
+    /**
+     * Select by order no omc order.
+     *
+     * @param orderNo the order no
+     * @return the omc order
+     */
+    OmcOrder selectByOrderNo(String orderNo);
 
-	/**
-	 * Select by user id list.
-	 *
-	 * @param userId the user id
-	 *
-	 * @return the list
-	 */
-	List<OmcOrder> selectByUserId(Long userId);
+    /**
+     * Select by user id list.
+     *
+     * @param userId the user id
+     * @return the list
+     */
+    List<OmcOrder> selectByUserId(Long userId);
 
-	/**
-	 * Select all order list.
-	 *
-	 * @return the list
-	 */
-	List<OmcOrder> selectAllOrder();
+    /**
+     * Select all order list.
+     *
+     * @return the list
+     */
+    List<OmcOrder> selectAllOrder();
 
-	/**
-	 * Query order list with page list.
-	 *
-	 * @param orderPageQuery the order page query
-	 *
-	 * @return the list
-	 */
-	List<OrderDocVo> queryOrderListWithPage(OrderPageQuery orderPageQuery);
+    /**
+     * Query order list with page list.
+     *
+     * @param orderPageQuery the order page query
+     * @return the list
+     */
+    List<OrderDocVo> queryOrderListWithPage(OrderPageQuery orderPageQuery);
 }

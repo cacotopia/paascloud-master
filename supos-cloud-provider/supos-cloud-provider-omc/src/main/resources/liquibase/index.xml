@@ -4,4 +4,9 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <include file="change_log/201908150001_omc_cart.xml" relativeToChangelogFile="true"/>
+    <include file="change_log/201908150002_omc_order.xml" relativeToChangelogFile="true"/>
+    <include file="change_log/201908150003_omc_order_detail.xml" relativeToChangelogFile="true"/>
+    <include file="change_log/201908150004_omc_shipping.xml" relativeToChangelogFile="true"/>
+    <include file="change_log/201908150005_ptc_pay_info.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>

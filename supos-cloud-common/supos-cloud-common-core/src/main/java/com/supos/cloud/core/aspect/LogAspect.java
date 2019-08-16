@@ -101,7 +101,7 @@ public class LogAspect {
             OperationLogDto operationLogDto = new OperationLogDto();
             operationLogDto.setClassName(joinPoint.getTarget().getClass().getName());
             operationLogDto.setMethodName(joinPoint.getSignature().getName());
-            operationLogDto.setExcuteTime(endTime.getTime() - startTime.getTime());
+            operationLogDto.setExecuteTime(endTime.getTime() - startTime.getTime());
             operationLogDto.setStartTime(startTime);
             operationLogDto.setEndTime(endTime);
             operationLogDto.setIp(ipAddress);

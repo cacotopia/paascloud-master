@@ -7,7 +7,7 @@
         <groupId>com.supos.cloud.common</groupId>
         <artifactId>supos-cloud-common</artifactId>
         <version>1.0.0</version>
-        <relativePath>..</relativePath>
+        <relativePath>../</relativePath>
     </parent>
 
     <artifactId>supos-cloud-common-base</artifactId>

@@ -3,7 +3,6 @@
 <mapper namespace="com.supos.cloud.provider.mapper.UacGroupMapper">
     <resultMap id="BaseResultMap" type="com.supos.cloud.provider.model.domain.UacGroup">
         <id column="id" jdbcType="BIGINT" property="id"/>
-        <result column="version" jdbcType="INTEGER" property="version"/>
         <result column="group_code" jdbcType="VARCHAR" property="groupCode"/>
         <result column="group_name" jdbcType="VARCHAR" property="groupName"/>
         <result column="status" jdbcType="INTEGER" property="status"/>
@@ -24,139 +23,140 @@
         <result column="street_id" jdbcType="BIGINT" property="streetId"/>
         <result column="contact_phone" jdbcType="VARCHAR" property="contactPhone"/>
         <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="number" jdbcType="INTEGER" property="number"/>
         <result column="creator" jdbcType="VARCHAR" property="creator"/>
         <result column="creator_id" jdbcType="BIGINT" property="creatorId"/>
         <result column="created_time" jdbcType="TIMESTAMP" property="createdTime"/>
         <result column="last_operator" jdbcType="VARCHAR" property="lastOperator"/>
         <result column="last_operator_id" jdbcType="BIGINT" property="lastOperatorId"/>
         <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
-        <result column="number" jdbcType="INTEGER" property="number"/>
+        <result column="version" jdbcType="INTEGER" property="version"/>
     </resultMap>
-    <sql id ="Base_OrderBy_Condition">
+    <sql id="Base_OrderBy_Condition">
         <if test="orderBy != null and orderBy !=''">
             ORDER BY ${orderBy}
         </if>
     </sql>
     <sql id="Base_Column_List">
-        g.id                 AS id                 ,
-        g.version            AS version            ,
-        g.group_code         AS group_code         ,
-        g.group_name         AS group_name         ,
-        g.status             AS status             ,
-        g.type               AS type               ,
-        g.pid                AS pid                ,
-        g.level              AS level              ,
-        g.leaf               AS leaf               ,
-        g.contact            AS contact            ,
-        g.group_address      AS group_address      ,
-        g.province_name      AS province_name      ,
-        g.province_id        AS provinceId         ,
-        g.city_name          AS city_name          ,
-        g.city_id            AS cityId             ,
-        g.area_name          AS areaName           ,
-        g.area_id            AS areaId             ,
-        g.street_name        AS street_name        ,
-        g.detail_address     AS detailDddress      ,
-        g.street_id          AS streetId           ,
-        g.contact_phone      AS contactPhone       ,
-        g.remark             AS remark             ,
-        g.creator            AS creator            ,
-        g.creator_id         AS creatorId          ,
-        g.created_time       AS createdTime        ,
-        g.last_operator      AS lastOperator       ,
-        g.last_operator_id   AS lastOperatorId     ,
-        g.update_time number AS updateTime number  ,
+        g.id AS id ,
+        g.version AS version ,
+        g.group_code AS group_code ,
+        g.group_name AS group_name ,
+        g.status AS status ,
+        g.type AS type ,
+        g.pid AS pid ,
+        g.level AS level ,
+        g.leaf AS leaf ,
+        g.contact AS contact ,
+        g.group_address AS group_address ,
+        g.province_name AS province_name ,
+        g.province_id AS provinceId ,
+        g.city_name AS city_name ,
+        g.city_id AS cityId ,
+        g.area_name AS areaName ,
+        g.area_id AS areaId ,
+        g.street_name AS street_name ,
+        g.detail_address AS detailDddress ,
+        g.street_id AS streetId ,
+        g.contact_phone AS contactPhone ,
+        g.remark AS remark ,
+        g.creator AS creator ,
+        g.creator_id AS creatorId ,
+        g.created_time AS createdTime ,
+        g.last_operator AS lastOperator ,
+        g.last_operator_id AS lastOperatorId ,
+        g.update_time number AS updateTime number ,
     </sql>
     <sql id="Base_Where_Condition">
-        <if test="id != null and id !=''" >
+        <if test="id != null and id !=''">
             AND id = #{id,jdbcType=BIGINT}
         </if>
-        <if test="version != null" >
+        <if test="version != null">
             AND version = #{version,jdbcType=INTEGER}
         </if>
-        <if test="groupCode != null and groupCode !=''" >
+        <if test="groupCode != null and groupCode !=''">
             AND group_code = #{groupCode,jdbcType=VARCHAR}
         </if>
-        <if test="groupName != null and groupName !=''" >
+        <if test="groupName != null and groupName !=''">
             AND group_name = #{groupName,jdbcType=VARCHAR}
         </if>
-        <if test="status != null" >
+        <if test="status != null">
             AND status = #{status,jdbcType=TINYINT}
         </if>
-        <if test="type != null and type !=''" >
+        <if test="type != null and type !=''">
             AND type = #{type,jdbcType=VARCHAR}
         </if>
-        <if test="pid != null and pid !=''" >
+        <if test="pid != null and pid !=''">
             AND pid = #{pid,jdbcType=BIGINT}
         </if>
-        <if test="level != null" >
+        <if test="level != null">
             AND level = #{level,jdbcType=INTEGER}
         </if>
-        <if test="leaf != null" >
+        <if test="leaf != null">
             AND leaf = #{leaf,jdbcType=INTEGER}
         </if>
-        <if test="contact != null and contact !=''" >
+        <if test="contact != null and contact !=''">
             AND contact = #{contact,jdbcType=VARCHAR}
         </if>
-        <if test="groupAddress != null and groupAddress !=''" >
+        <if test="groupAddress != null and groupAddress !=''">
             AND group_address = #{groupAddress,jdbcType=VARCHAR}
         </if>
-        <if test="provinceName != null and provinceName !=''" >
+        <if test="provinceName != null and provinceName !=''">
             AND province_name = #{provinceName,jdbcType=VARCHAR}
         </if>
-        <if test="provinceId != null and provinceId !=''" >
+        <if test="provinceId != null and provinceId !=''">
             AND province_id = #{provinceId,jdbcType=BIGINT}
         </if>
-        <if test="cityName != null and cityName !=''" >
+        <if test="cityName != null and cityName !=''">
             AND city_name = #{cityName,jdbcType=VARCHAR}
         </if>
-        <if test="cityId != null and cityId !=''" >
+        <if test="cityId != null and cityId !=''">
             AND city_id = #{cityId,jdbcType=BIGINT}
         </if>
-        <if test="areaName != null and areaName !=''" >
+        <if test="areaName != null and areaName !=''">
             AND area_name = #{areaName,jdbcType=VARCHAR}
         </if>
-        <if test="areaId != null and areaId !=''" >
+        <if test="areaId != null and areaId !=''">
             AND area_id = #{areaId,jdbcType=BIGINT}
         </if>
-        <if test="streetName != null and streetName !=''" >
+        <if test="streetName != null and streetName !=''">
             AND street_name = #{streetName,jdbcType=VARCHAR}
         </if>
-        <if test="detailAddress != null and detailAddress !=''" >
+        <if test="detailAddress != null and detailAddress !=''">
             AND detail_address = #{detailAddress,jdbcType=VARCHAR}
         </if>
-        <if test="streetId != null and streetId !=''" >
+        <if test="streetId != null and streetId !=''">
             AND street_id = #{streetId,jdbcType=BIGINT}
         </if>
-        <if test="contactPhone != null and contactPhone !=''" >
+        <if test="contactPhone != null and contactPhone !=''">
             AND contact_phone = #{contactPhone,jdbcType=VARCHAR}
         </if>
-        <if test="remark != null and remark !=''" >
+        <if test="remark != null and remark !=''">
             AND remark = #{remark,jdbcType=VARCHAR}
         </if>
-        <if test="creator != null and creator !=''" >
+        <if test="creator != null and creator !=''">
             AND creator = #{creator,jdbcType=VARCHAR}
         </if>
-        <if test="creatorId != null and creatorId !=''" >
+        <if test="creatorId != null and creatorId !=''">
             AND creator_id = #{creatorId,jdbcType=BIGINT}
         </if>
-        <if test="createdTime != null" >
+        <if test="createdTime != null">
             AND created_time = #{createdTime,jdbcType=TIMESTAMP}
         </if>
-        <if test="lastOperator != null and lastOperator !=''" >
+        <if test="lastOperator != null and lastOperator !=''">
             AND last_operator = #{lastOperator,jdbcType=VARCHAR}
         </if>
-        <if test="lastOperatorId != null and lastOperatorId !=''" >
+        <if test="lastOperatorId != null and lastOperatorId !=''">
             AND last_operator_id = #{lastOperatorId,jdbcType=BIGINT}
         </if>
-        <if test="updateTime != null" >
+        <if test="updateTime != null">
             AND update_time = #{updateTime,jdbcType=TIMESTAMP}
         </if>
-        <if test="number != null" >
+        <if test="number != null">
             AND number = #{number,jdbcType=INTEGER}
         </if>
     </sql>
-    <sql id ="Base_Set_Condition">
+    <sql id="Base_Set_Condition">
         <set>
             <if test="version != null">
                 version = #{version,jdbcType=INTEGER},

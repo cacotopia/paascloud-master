@@ -6,7 +6,7 @@
         <groupId>com.supos.cloud</groupId>
         <artifactId>supos-cloud-parent</artifactId>
         <version>1.0.0</version>
-        <relativePath>..</relativePath>
+        <relativePath>../</relativePath>
     </parent>
     <groupId>com.supos.cloud.provider.api</groupId>
     <modelVersion>4.0.0</modelVersion>

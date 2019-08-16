@@ -23,7 +23,7 @@
         <result column="method_name" property="methodName" jdbcType="VARCHAR"/>
         <result column="start_time" property="startTime" jdbcType="TIMESTAMP"/>
         <result column="end_time" property="endTime" jdbcType="TIMESTAMP"/>
-        <result column="excute_time" property="excuteTime" jdbcType="BIGINT"/>
+        <result column="execute_time" property="executeTime" jdbcType="BIGINT"/>
         <result column="group_id" property="groupId" jdbcType="BIGINT"/>
         <result column="group_name" property="groupName" jdbcType="VARCHAR"/>
         <result column="creator" property="creator" jdbcType="VARCHAR"/>
@@ -33,40 +33,40 @@
         <result column="last_operator_id" property="lastOperatorId" jdbcType="BIGINT"/>
         <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
     </resultMap>
-    <sql id ="Base_OrderBy_Condition">
+    <sql id="Base_OrderBy_Condition">
         <if test="orderBy != null and orderBy !=''">
             ORDER BY ${orderBy}
         </if>
     </sql>
     <sql id="Base_Column_List">
-        log.id                   AS id               ,
-        log.group_id             AS groupId          ,
-        log.group_name           AS groupName        ,
-        log.log_type             AS logType          ,
-        log.log_name             AS logName          ,
-        log.action_id            AS actionId         ,
-        log.action_code          AS actionCode       ,
-        log.action_name          AS actionName       ,
-        log.os                   AS os               ,
-        log.browser              AS browser          ,
-        log.ip                   AS ip               ,
-        log.location             AS location         ,
-        log.mac                  AS mac              ,
-        log.description          AS description      ,
-        log.request_data         AS requestData      ,
-        log.request_url          AS requestUrl       ,
-        log.response_data        AS responseData     ,
-        log.class_name           AS className        ,
-        log.method_name          AS methodName       ,
-        log.start_time           AS startTime        ,
-        log.end_time             AS endTime          ,
-        log.excute_time          AS excuteTime       ,
-        log.creator              AS creator          ,
-        log.creator_id           AS creatorId        ,
-        log.created_time         AS createdTime      ,
-        log.last_operator        AS lastOperator     ,
-        log.last_operator_id     AS lastOperatorId   ,
-        log.update_time          AS updateTime
+        log.id AS id ,
+        log.group_id AS groupId ,
+        log.group_name AS groupName ,
+        log.log_type AS logType ,
+        log.log_name AS logName ,
+        log.action_id AS actionId ,
+        log.action_code AS actionCode ,
+        log.action_name AS actionName ,
+        log.os AS os ,
+        log.browser AS browser ,
+        log.ip AS ip ,
+        log.location AS location ,
+        log.mac AS mac ,
+        log.description AS description ,
+        log.request_data AS requestData ,
+        log.request_url AS requestUrl ,
+        log.response_data AS responseData ,
+        log.class_name AS className ,
+        log.method_name AS methodName ,
+        log.start_time AS startTime ,
+        log.end_time AS endTime ,
+        log.execute_time AS executeTime ,
+        log.creator AS creator ,
+        log.creator_id AS creatorId ,
+        log.created_time AS createdTime ,
+        log.last_operator AS lastOperator ,
+        log.last_operator_id AS lastOperatorId ,
+        log.update_time AS updateTime
     </sql>
     <sql id="Base_Where_Condition">
         <if test="id != null and id != ''">
@@ -129,8 +129,8 @@
         <if test="endTime != null">
             AND end_time = #{endTime,jdbcType=TIMESTAMP}
         </if>
-        <if test="excuteTime != null">
-            AND excute_time = #{excuteTime,jdbcType=INTEGER}
+        <if test="executeTime != null">
+            AND execute_time = #{executeTime,jdbcType=INTEGER}
         </if>
         <if test="creator != null and creator != ''">
             AND creator = #{creator,jdbcType=VARCHAR}
@@ -151,7 +151,7 @@
             AND update_time = #{updateTime,jdbcType=TIMESTAMP}
         </if>
     </sql>
-    <sql id ="Base_Set_Condition">
+    <sql id="Base_Set_Condition">
         <set>
             <if test="groupId != null">
                 group_id = #{groupId,jdbcType=BIGINT},
@@ -210,8 +210,8 @@
             <if test="endTime != null">
                 end_time = #{endTime,jdbcType=TIMESTAMP},
             </if>
-            <if test="excuteTime != null">
-                excute_time = #{excuteTime,jdbcType=INTEGER},
+            <if test="executeTime != null">
+                execute_time = #{executeTime,jdbcType=INTEGER},
             </if>
             <if test="creator != null">
                 creator = #{creator,jdbcType=VARCHAR},
@@ -235,11 +235,11 @@
     </sql>
     <select id="selectUserLogListByUserId" parameterType="long" resultMap="BaseResultMap">
         SELECT
-            <include refid="Base_Column_List"/>
+        <include refid="Base_Column_List"/>
         FROM
-            pc_uac_log log
+        pc_uac_log log
         WHERE
-            log.creator_id = #{userId}
+        log.creator_id = #{userId}
         ORDER BY log.created_time desc
     </select>
     <select id="queryLogListWithPage" resultType="com.supos.cloud.provider.model.domain.UacLog">

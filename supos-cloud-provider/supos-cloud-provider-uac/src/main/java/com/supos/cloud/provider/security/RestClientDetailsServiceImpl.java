@@ -22,45 +22,43 @@ import javax.annotation.PostConstruct;
 @Component("restClientDetailsService")
 public class RestClientDetailsServiceImpl implements ClientDetailsService {
 
-	private ClientDetailsService clientDetailsService;
+    private ClientDetailsService clientDetailsService;
 
-	@Autowired
-	private SecurityProperties securityProperties;
+    @Autowired
+    private SecurityProperties securityProperties;
 
-	/**
-	 * Init.
-	 */
-	@PostConstruct
-	public void init() {
-		InMemoryClientDetailsServiceBuilder builder = new InMemoryClientDetailsServiceBuilder();
-		if (ArrayUtils.isNotEmpty(securityProperties.getOauth2().getClients())) {
-			for (OAuth2ClientProperties client : securityProperties.getOauth2().getClients()) {
-				builder.withClient(client.getClientId())
-						.secret(client.getClientSecret())
-						.authorizedGrantTypes("refresh_token", "password", "client_credentials")
-						.accessTokenValiditySeconds(client.getAccessTokenValidateSeconds())
-						.refreshTokenValiditySeconds(client.getRefreshTokenValiditySeconds())
-						.scopes(client.getScope());
-			}
-		}
-		try {
-			clientDetailsService = builder.build();
-		} catch (Exception e) {
-			log.error("init={}", e.getMessage(), e);
-		}
-	}
+    /**
+     * Init.
+     */
+    @PostConstruct
+    public void init() {
+        InMemoryClientDetailsServiceBuilder builder = new InMemoryClientDetailsServiceBuilder();
+        if (ArrayUtils.isNotEmpty(securityProperties.getOauth2().getClients())) {
+            for (OAuth2ClientProperties client : securityProperties.getOauth2().getClients()) {
+                builder.withClient(client.getClientId())
+                        .secret(client.getClientSecret())
+                        .authorizedGrantTypes("refresh_token", "password", "client_credentials")
+                        .accessTokenValiditySeconds(client.getAccessTokenValidateSeconds())
+                        .refreshTokenValiditySeconds(client.getRefreshTokenValiditySeconds())
+                        .scopes(client.getScope());
+            }
+        }
+        try {
+            clientDetailsService = builder.build();
+        } catch (Exception e) {
+            log.error("init={}", e.getMessage(), e);
+        }
+    }
 
-	/**
-	 * Load client by client id client details.
-	 *
-	 * @param clientId the client id
-	 *
-	 * @return the client details
-	 *
-	 * @throws ClientRegistrationException the client registration exception
-	 */
-	@Override
-	public ClientDetails loadClientByClientId(String clientId) throws ClientRegistrationException {
-		return clientDetailsService.loadClientByClientId(clientId);
-	}
+    /**
+     * Load client by client id client details.
+     *
+     * @param clientId the client id
+     * @return the client details
+     * @throws ClientRegistrationException the client registration exception
+     */
+    @Override
+    public ClientDetails loadClientByClientId(String clientId) throws ClientRegistrationException {
+        return clientDetailsService.loadClientByClientId(clientId);
+    }
 }

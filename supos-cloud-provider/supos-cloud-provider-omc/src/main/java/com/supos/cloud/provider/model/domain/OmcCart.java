@@ -17,20 +17,21 @@ import javax.persistence.Table;
 @Table(name = "pc_omc_cart")
 public class OmcCart extends BaseEntity {
 
-	private static final long serialVersionUID = 5333646386138778574L;
-	@Column(name = "user_id")
-	private Long userId;
+    private static final long serialVersionUID = 5333646386138778574L;
 
-	@Column(name = "product_id")
-	private Long productId;
+    @Column(name = "user_id")
+    private Long userId;
 
-	/**
-	 * 数量
-	 */
-	private Integer quantity;
+    @Column(name = "product_id")
+    private Long productId;
 
-	/**
-	 * 是否选择,1=已勾选,0=未勾选
-	 */
-	private Integer checked;
+    /**
+     * 数量
+     */
+    private Integer quantity;
+
+    /**
+     * 是否选择,1=已勾选,0=未勾选
+     */
+    private Integer checked;
 }

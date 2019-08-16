@@ -119,7 +119,7 @@ public class OperationLogDto implements Serializable {
     /**
      * 耗时,秒
      */
-    private Long excuteTime;
+    private Long executeTime;
 
     /**
      * 创建人
